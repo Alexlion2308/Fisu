@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502D1C9B6E57003FF5BB /* AppDelegate.swift */; };
+		849150301C9B6E57003FF5BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502F1C9B6E57003FF5BB /* ViewController.swift */; };
+		849150331C9B6E57003FF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150311C9B6E57003FF5BB /* Main.storyboard */; };
+		849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */; };
+		849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849150371C9B6E57003FF5BB /* Assets.xcassets */; };
+		8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */; };
+		849150461C9B6E57003FF5BB /* FisuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150451C9B6E57003FF5BB /* FisuTests.swift */; };
+		849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150501C9B6E58003FF5BB /* FisuUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		849150421C9B6E57003FF5BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849150221C9B6E57003FF5BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849150291C9B6E57003FF5BB;
+			remoteInfo = Fisu;
+		};
+		8491504D1C9B6E58003FF5BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 849150221C9B6E57003FF5BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 849150291C9B6E57003FF5BB;
+			remoteInfo = Fisu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8491502A1C9B6E57003FF5BB /* Fisu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fisu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8491502D1C9B6E57003FF5BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8491502F1C9B6E57003FF5BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		849150321C9B6E57003FF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		849150351C9B6E57003FF5BB /* Fisu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fisu.xcdatamodel; sourceTree = "<group>"; };
+		849150371C9B6E57003FF5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8491503A1C9B6E57003FF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8491503C1C9B6E57003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849150411C9B6E57003FF5BB /* FisuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FisuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849150451C9B6E57003FF5BB /* FisuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisuTests.swift; sourceTree = "<group>"; };
+		849150471C9B6E58003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8491504C1C9B6E58003FF5BB /* FisuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FisuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849150501C9B6E58003FF5BB /* FisuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisuUITests.swift; sourceTree = "<group>"; };
+		849150521C9B6E58003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		849150271C9B6E57003FF5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8491503E1C9B6E57003FF5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849150491C9B6E58003FF5BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		849150211C9B6E57003FF5BB = {
+			isa = PBXGroup;
+			children = (
+				8491502C1C9B6E57003FF5BB /* Fisu */,
+				849150441C9B6E57003FF5BB /* FisuTests */,
+				8491504F1C9B6E58003FF5BB /* FisuUITests */,
+				8491502B1C9B6E57003FF5BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8491502B1C9B6E57003FF5BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8491502A1C9B6E57003FF5BB /* Fisu.app */,
+				849150411C9B6E57003FF5BB /* FisuTests.xctest */,
+				8491504C1C9B6E58003FF5BB /* FisuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8491502C1C9B6E57003FF5BB /* Fisu */ = {
+			isa = PBXGroup;
+			children = (
+				8491502D1C9B6E57003FF5BB /* AppDelegate.swift */,
+				8491502F1C9B6E57003FF5BB /* ViewController.swift */,
+				849150311C9B6E57003FF5BB /* Main.storyboard */,
+				849150371C9B6E57003FF5BB /* Assets.xcassets */,
+				849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */,
+				8491503C1C9B6E57003FF5BB /* Info.plist */,
+				849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */,
+			);
+			path = Fisu;
+			sourceTree = "<group>";
+		};
+		849150441C9B6E57003FF5BB /* FisuTests */ = {
+			isa = PBXGroup;
+			children = (
+				849150451C9B6E57003FF5BB /* FisuTests.swift */,
+				849150471C9B6E58003FF5BB /* Info.plist */,
+			);
+			path = FisuTests;
+			sourceTree = "<group>";
+		};
+		8491504F1C9B6E58003FF5BB /* FisuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				849150501C9B6E58003FF5BB /* FisuUITests.swift */,
+				849150521C9B6E58003FF5BB /* Info.plist */,
+			);
+			path = FisuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		849150291C9B6E57003FF5BB /* Fisu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849150551C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "Fisu" */;
+			buildPhases = (
+				849150261C9B6E57003FF5BB /* Sources */,
+				849150271C9B6E57003FF5BB /* Frameworks */,
+				849150281C9B6E57003FF5BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fisu;
+			productName = Fisu;
+			productReference = 8491502A1C9B6E57003FF5BB /* Fisu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		849150401C9B6E57003FF5BB /* FisuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849150581C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuTests" */;
+			buildPhases = (
+				8491503D1C9B6E57003FF5BB /* Sources */,
+				8491503E1C9B6E57003FF5BB /* Frameworks */,
+				8491503F1C9B6E57003FF5BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849150431C9B6E57003FF5BB /* PBXTargetDependency */,
+			);
+			name = FisuTests;
+			productName = FisuTests;
+			productReference = 849150411C9B6E57003FF5BB /* FisuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8491504B1C9B6E58003FF5BB /* FisuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8491505B1C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuUITests" */;
+			buildPhases = (
+				849150481C9B6E58003FF5BB /* Sources */,
+				849150491C9B6E58003FF5BB /* Frameworks */,
+				8491504A1C9B6E58003FF5BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8491504E1C9B6E58003FF5BB /* PBXTargetDependency */,
+			);
+			name = FisuUITests;
+			productName = FisuUITests;
+			productReference = 8491504C1C9B6E58003FF5BB /* FisuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		849150221C9B6E57003FF5BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Casati-Vasseur";
+				TargetAttributes = {
+					849150291C9B6E57003FF5BB = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = RQCNFHQP54;
+					};
+					849150401C9B6E57003FF5BB = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = RQCNFHQP54;
+						TestTargetID = 849150291C9B6E57003FF5BB;
+					};
+					8491504B1C9B6E58003FF5BB = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = RQCNFHQP54;
+						TestTargetID = 849150291C9B6E57003FF5BB;
+					};
+				};
+			};
+			buildConfigurationList = 849150251C9B6E57003FF5BB /* Build configuration list for PBXProject "Fisu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 849150211C9B6E57003FF5BB;
+			productRefGroup = 8491502B1C9B6E57003FF5BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				849150291C9B6E57003FF5BB /* Fisu */,
+				849150401C9B6E57003FF5BB /* FisuTests */,
+				8491504B1C9B6E58003FF5BB /* FisuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		849150281C9B6E57003FF5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */,
+				849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */,
+				849150331C9B6E57003FF5BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8491503F1C9B6E57003FF5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8491504A1C9B6E58003FF5BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		849150261C9B6E57003FF5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849150301C9B6E57003FF5BB /* ViewController.swift in Sources */,
+				8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */,
+				849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8491503D1C9B6E57003FF5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849150461C9B6E57003FF5BB /* FisuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		849150481C9B6E58003FF5BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		849150431C9B6E57003FF5BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849150291C9B6E57003FF5BB /* Fisu */;
+			targetProxy = 849150421C9B6E57003FF5BB /* PBXContainerItemProxy */;
+		};
+		8491504E1C9B6E58003FF5BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 849150291C9B6E57003FF5BB /* Fisu */;
+			targetProxy = 8491504D1C9B6E58003FF5BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		849150311C9B6E57003FF5BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				849150321C9B6E57003FF5BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8491503A1C9B6E57003FF5BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		849150531C9B6E58003FF5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		849150541C9B6E58003FF5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		849150561C9B6E58003FF5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Fisu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.Fisu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		849150571C9B6E58003FF5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Fisu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.Fisu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		849150591C9B6E58003FF5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FisuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.FisuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fisu.app/Fisu";
+			};
+			name = Debug;
+		};
+		8491505A1C9B6E58003FF5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FisuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.FisuTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fisu.app/Fisu";
+			};
+			name = Release;
+		};
+		8491505C1C9B6E58003FF5BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FisuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.FisuUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fisu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8491505D1C9B6E58003FF5BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FisuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.FisuUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fisu;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		849150251C9B6E57003FF5BB /* Build configuration list for PBXProject "Fisu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849150531C9B6E58003FF5BB /* Debug */,
+				849150541C9B6E58003FF5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849150551C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "Fisu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849150561C9B6E58003FF5BB /* Debug */,
+				849150571C9B6E58003FF5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		849150581C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849150591C9B6E58003FF5BB /* Debug */,
+				8491505A1C9B6E58003FF5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8491505B1C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8491505C1C9B6E58003FF5BB /* Debug */,
+				8491505D1C9B6E58003FF5BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				849150351C9B6E57003FF5BB /* Fisu.xcdatamodel */,
+			);
+			currentVersion = 849150351C9B6E57003FF5BB /* Fisu.xcdatamodel */;
+			path = Fisu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 849150221C9B6E57003FF5BB /* Project object */;
+}
