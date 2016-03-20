@@ -493,6 +493,7 @@
 				849150571C9B6E58003FF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		849150581C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +502,7 @@
 				8491505A1C9B6E58003FF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8491505B1C9B6E58003FF5BB /* Build configuration list for PBXNativeTarget "FisuUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +511,7 @@
 				8491505D1C9B6E58003FF5BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
