@@ -27,6 +27,26 @@
 		841FE2371C9F01C400C8DB54 /* Catering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2241C9F01C400C8DB54 /* Catering+CoreDataProperties.swift */; };
 		841FE2381C9F01C400C8DB54 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2251C9F01C400C8DB54 /* Catering.swift */; };
 		841FE2391C9F01C400C8DB54 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2251C9F01C400C8DB54 /* Catering.swift */; };
+		8480EFAC1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */; };
+		8480EFAD1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */; };
+		8480EFAF1C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */; };
+		8480EFB01C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */; };
+		8480EFB21C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */; };
+		8480EFB31C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */; };
+		8480EFB51C9F2582003054F9 /* CateringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB41C9F2582003054F9 /* CateringViewController.swift */; };
+		8480EFB61C9F2582003054F9 /* CateringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB41C9F2582003054F9 /* CateringViewController.swift */; };
+		8480EFB81C9F259A003054F9 /* CateringDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB71C9F259A003054F9 /* CateringDetailViewController.swift */; };
+		8480EFB91C9F259A003054F9 /* CateringDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB71C9F259A003054F9 /* CateringDetailViewController.swift */; };
+		8480EFBB1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */; };
+		8480EFBC1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */; };
+		8480EFC11C9F28C6003054F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC01C9F28C6003054F9 /* MapViewController.swift */; };
+		8480EFC21C9F28C6003054F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC01C9F28C6003054F9 /* MapViewController.swift */; };
+		8480EFC41C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC31C9F3050003054F9 /* ActivityTableViewCell.swift */; };
+		8480EFC51C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC31C9F3050003054F9 /* ActivityTableViewCell.swift */; };
+		8480EFC71C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */; };
+		8480EFC81C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */; };
+		8480EFCA1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */; };
+		8480EFCB1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */; };
 		8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502D1C9B6E57003FF5BB /* AppDelegate.swift */; };
 		849150301C9B6E57003FF5BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502F1C9B6E57003FF5BB /* ViewController.swift */; };
 		849150331C9B6E57003FF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150311C9B6E57003FF5BB /* Main.storyboard */; };
@@ -65,6 +85,16 @@
 		841FE2231C9F01C400C8DB54 /* CategoryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEvent.swift; sourceTree = "<group>"; };
 		841FE2241C9F01C400C8DB54 /* Catering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Catering+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		841FE2251C9F01C400C8DB54 /* Catering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catering.swift; sourceTree = "<group>"; };
+		8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivitiesViewController.swift; sourceTree = "<group>"; };
+		8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDetailViewController.swift; sourceTree = "<group>"; };
+		8480EFB41C9F2582003054F9 /* CateringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateringViewController.swift; sourceTree = "<group>"; };
+		8480EFB71C9F259A003054F9 /* CateringDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateringDetailViewController.swift; sourceTree = "<group>"; };
+		8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		8480EFC01C9F28C6003054F9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8480EFC31C9F3050003054F9 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateringTableViewCell.swift; sourceTree = "<group>"; };
 		8491502A1C9B6E57003FF5BB /* Fisu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fisu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8491502D1C9B6E57003FF5BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8491502F1C9B6E57003FF5BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,9 +179,19 @@
 				841FE21B1C9F017C00C8DB54 /* Business Logic */,
 				8491502D1C9B6E57003FF5BB /* AppDelegate.swift */,
 				8491502F1C9B6E57003FF5BB /* ViewController.swift */,
+				8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */,
+				8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */,
+				8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */,
+				8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */,
+				8480EFB41C9F2582003054F9 /* CateringViewController.swift */,
+				8480EFB71C9F259A003054F9 /* CateringDetailViewController.swift */,
+				8480EFC01C9F28C6003054F9 /* MapViewController.swift */,
 				849150311C9B6E57003FF5BB /* Main.storyboard */,
-				849150371C9B6E57003FF5BB /* Assets.xcassets */,
+				8480EFC31C9F3050003054F9 /* ActivityTableViewCell.swift */,
+				8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */,
+				8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */,
 				849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */,
+				849150371C9B6E57003FF5BB /* Assets.xcassets */,
 				8491503C1C9B6E57003FF5BB /* Info.plist */,
 				849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */,
 			);
@@ -313,15 +353,25 @@
 				841FE2361C9F01C400C8DB54 /* Catering+CoreDataProperties.swift in Sources */,
 				849150301C9B6E57003FF5BB /* ViewController.swift in Sources */,
 				841FE2301C9F01C400C8DB54 /* Event.swift in Sources */,
+				8480EFC11C9F28C6003054F9 /* MapViewController.swift in Sources */,
 				841FE2381C9F01C400C8DB54 /* Catering.swift in Sources */,
 				841FE2321C9F01C400C8DB54 /* CategoryEvent+CoreDataProperties.swift in Sources */,
+				8480EFB51C9F2582003054F9 /* CateringViewController.swift in Sources */,
+				8480EFC71C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */,
+				8480EFAC1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */,
 				8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */,
 				841FE2261C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift in Sources */,
+				8480EFB21C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */,
+				8480EFC41C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */,
 				841FE2281C9F01C400C8DB54 /* CategoryCatering.swift in Sources */,
 				841FE22C1C9F01C400C8DB54 /* Speaker.swift in Sources */,
 				841FE22A1C9F01C400C8DB54 /* Speaker+CoreDataProperties.swift in Sources */,
+				8480EFB81C9F259A003054F9 /* CateringDetailViewController.swift in Sources */,
 				841FE22E1C9F01C400C8DB54 /* Event+CoreDataProperties.swift in Sources */,
+				8480EFCA1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */,
+				8480EFAF1C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */,
 				849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */,
+				8480EFBB1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */,
 				841FE2341C9F01C400C8DB54 /* CategoryEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +398,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8480EFB01C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */,
 				849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */,
+				8480EFB31C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */,
+				8480EFCB1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */,
+				8480EFAD1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */,
+				8480EFBC1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */,
+				8480EFB61C9F2582003054F9 /* CateringViewController.swift in Sources */,
+				8480EFB91C9F259A003054F9 /* CateringDetailViewController.swift in Sources */,
+				8480EFC81C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */,
+				8480EFC21C9F28C6003054F9 /* MapViewController.swift in Sources */,
+				8480EFC51C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
