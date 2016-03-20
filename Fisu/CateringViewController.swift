@@ -8,10 +8,15 @@
 
 import UIKit
 
-class CateringViewController: UIViewController {
+class CateringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Delegate and Datasource of the TableView
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        //Adjust TableView to the top of the screen
+        self.automaticallyAdjustsScrollViewInsets = false
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +26,7 @@ class CateringViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var myTableView: UITableView!
 
     /*
     // MARK: - Navigation
@@ -31,5 +37,25 @@ class CateringViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cateringCell", forIndexPath: indexPath) as! CateringTableViewCell
+        
+        // Configure the cell...
+        cell.myCellTitle.text = "Exemple"
+        return cell
+    }
+
 
 }
