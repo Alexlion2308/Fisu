@@ -8,7 +8,7 @@
         <!--Map View Controller-->
         <scene sceneID="L3x-WI-t5c">
             <objects>
-                <viewController title="Map View Controller" id="p3G-1B-hrF" sceneMemberID="viewController">
+                <viewController title="Map View Controller" id="p3G-1B-hrF" customClass="MapViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="72q-1c-rb8"/>
                         <viewControllerLayoutGuide type="bottom" id="KBf-iN-nsn"/>
@@ -28,7 +28,7 @@
         <!--My Activities View Controller-->
         <scene sceneID="MkF-Xd-pa4">
             <objects>
-                <viewController title="My Activities View Controller" id="mAM-NW-htD" sceneMemberID="viewController">
+                <viewController title="My Activities View Controller" id="mAM-NW-htD" customClass="MyActivitiesViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IX4-2M-iVM"/>
                         <viewControllerLayoutGuide type="bottom" id="bWf-Vx-7tt"/>
@@ -47,7 +47,7 @@
         <!--Activity Detail View Controller-->
         <scene sceneID="AAG-4D-SMe">
             <objects>
-                <viewController title="Activity Detail View Controller" id="1qP-4o-iRh" sceneMemberID="viewController">
+                <viewController title="Activity Detail View Controller" id="1qP-4o-iRh" customClass="ActivityDetailViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qVS-7P-xqo"/>
                         <viewControllerLayoutGuide type="bottom" id="aXI-0N-Xeo"/>
@@ -66,7 +66,7 @@
         <!--Speaker Detail View Controller-->
         <scene sceneID="ZyV-ju-vmM">
             <objects>
-                <viewController title="Speaker Detail View Controller" id="qz1-yQ-RLe" sceneMemberID="viewController">
+                <viewController title="Speaker Detail View Controller" id="qz1-yQ-RLe" customClass="SpeakerDetailViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fAh-Rc-X4W"/>
                         <viewControllerLayoutGuide type="bottom" id="XA2-Yv-j0R"/>
@@ -85,7 +85,7 @@
         <!--Catering View Controller-->
         <scene sceneID="WoL-yC-Gec">
             <objects>
-                <viewController title="Catering View Controller" id="Jhk-zA-Uff" sceneMemberID="viewController">
+                <viewController title="Catering View Controller" id="Jhk-zA-Uff" customClass="CateringViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SAK-0f-1UW"/>
                         <viewControllerLayoutGuide type="bottom" id="p8W-eD-Tz6"/>
@@ -104,7 +104,7 @@
         <!--Catering Detail View Controller-->
         <scene sceneID="8Ro-7w-TWP">
             <objects>
-                <viewController title="Catering Detail View Controller" id="wE7-PY-9BJ" sceneMemberID="viewController">
+                <viewController title="Catering Detail View Controller" id="wE7-PY-9BJ" customClass="CateringDetailViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d44-Hh-pD0"/>
                         <viewControllerLayoutGuide type="bottom" id="MYx-bx-DDo"/>
@@ -123,7 +123,7 @@
         <!--Activities View Controller-->
         <scene sceneID="p73-mT-pcP">
             <objects>
-                <viewController title="Activities View Controller" id="Opu-eq-Hzh" sceneMemberID="viewController">
+                <viewController title="Activities View Controller" id="Opu-eq-Hzh" customClass="ActivitiesViewController" customModule="Fisu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VfS-gv-Tgp"/>
                         <viewControllerLayoutGuide type="bottom" id="p58-T0-98g"/>
