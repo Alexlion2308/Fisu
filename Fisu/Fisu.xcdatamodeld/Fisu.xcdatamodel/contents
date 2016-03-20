@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
-    <entity name="CategoryCatering" representedClassName=".CategoryCatering" syncable="YES">
+    <entity name="CategoryCatering" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="hasCaterings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Catering" inverseName="hasCategory" inverseEntity="Catering" syncable="YES"/>
     </entity>
-    <entity name="CategoryEvent" representedClassName=".CategoryEvent" syncable="YES">
+    <entity name="CategoryEvent" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="hasEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="hasCategory" inverseEntity="Event" syncable="YES"/>
     </entity>
-    <entity name="Catering" representedClassName=".Catering" syncable="YES">
+    <entity name="Catering" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
@@ -16,7 +16,7 @@
         <attribute name="picture" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="hasCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryCatering" inverseName="hasCaterings" inverseEntity="CategoryCatering" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName=".Event" syncable="YES">
+    <entity name="Event" syncable="YES">
         <attribute name="beginDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -27,7 +27,7 @@
         <relationship name="hasCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryEvent" inverseName="hasEvents" inverseEntity="CategoryEvent" syncable="YES"/>
         <relationship name="hasSpeakers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Speaker" inverseName="speaksEvents" inverseEntity="Speaker" syncable="YES"/>
     </entity>
-    <entity name="Speaker" representedClassName=".Speaker" syncable="YES">
+    <entity name="Speaker" syncable="YES">
         <attribute name="designation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -36,10 +36,10 @@
         <relationship name="speaksEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="hasSpeakers" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CategoryCatering" positionX="-243" positionY="-4285" width="128" height="73"/>
-        <element name="CategoryEvent" positionX="-236" positionY="-4384" width="146" height="73"/>
-        <element name="Catering" positionX="-477" positionY="-4248" width="128" height="133"/>
         <element name="Event" positionX="-497" positionY="-4444" width="155" height="178"/>
+        <element name="CategoryEvent" positionX="-236" positionY="-4384" width="146" height="73"/>
         <element name="Speaker" positionX="-729" positionY="-4342" width="128" height="133"/>
+        <element name="Catering" positionX="-477" positionY="-4248" width="128" height="133"/>
+        <element name="CategoryCatering" positionX="-243" positionY="-4285" width="128" height="73"/>
     </elements>
 </model>
