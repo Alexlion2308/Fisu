@@ -15,6 +15,7 @@ import CoreData
 extension Event {
 
     @NSManaged var beginDate: NSDate?
+    @NSManaged var chosen: NSNumber?
     @NSManaged var detail: String?
     @NSManaged var endDate: NSDate?
     @NSManaged var name: String?
