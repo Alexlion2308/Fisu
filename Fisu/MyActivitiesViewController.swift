@@ -2,20 +2,17 @@
 //  MyActivitiesViewController.swift
 //  Fisu
 //
-//  Created by vm mac on 20/03/2016.
+//  Created by vm mac on 21/03/2016.
 //  Copyright © 2016 Casati-Vasseur. All rights reserved.
 //
 
 import UIKit
 
-class MyActivitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class MyActivitiesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTableView.dataSource = self
-        myTableView.delegate = self
-        //Adjust TableView to the top of the screen
-        self.automaticallyAdjustsScrollViewInsets = false
+
         // Do any additional setup after loading the view.
     }
 
@@ -24,7 +21,6 @@ class MyActivitiesViewController: UIViewController, UITableViewDelegate, UITable
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var myTableView: UITableView!
 
     /*
     // MARK: - Navigation
@@ -35,27 +31,5 @@ class MyActivitiesViewController: UIViewController, UITableViewDelegate, UITable
         // Pass the selected object to the new view controller.
     }
     */
-    
-    // MARK: - Table view data source
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myActivityCell", forIndexPath: indexPath) as! MyActivityTableViewCell
-        
-        // Configure the cell...
-        cell.myTitle.text = "Exemple"
-        return cell
-    }
-    
-    
-
 
 }

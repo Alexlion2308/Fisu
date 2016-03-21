@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8405691C1CA0A5850003EB09 /* MyActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405691B1CA0A5850003EB09 /* MyActivityTableViewCell.swift */; };
+		8405691D1CA0A5850003EB09 /* MyActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405691B1CA0A5850003EB09 /* MyActivityTableViewCell.swift */; };
+		8405691F1CA0A5CE0003EB09 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405691E1CA0A5CE0003EB09 /* MyActivitiesViewController.swift */; };
+		840569201CA0A5CE0003EB09 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405691E1CA0A5CE0003EB09 /* MyActivitiesViewController.swift */; };
 		841FE2261C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE21C1C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift */; };
 		841FE2271C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE21C1C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift */; };
 		841FE2281C9F01C400C8DB54 /* CategoryCatering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE21D1C9F01C400C8DB54 /* CategoryCatering.swift */; };
@@ -27,8 +31,6 @@
 		841FE2371C9F01C400C8DB54 /* Catering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2241C9F01C400C8DB54 /* Catering+CoreDataProperties.swift */; };
 		841FE2381C9F01C400C8DB54 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2251C9F01C400C8DB54 /* Catering.swift */; };
 		841FE2391C9F01C400C8DB54 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FE2251C9F01C400C8DB54 /* Catering.swift */; };
-		8480EFAC1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */; };
-		8480EFAD1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */; };
 		8480EFAF1C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */; };
 		8480EFB01C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */; };
 		8480EFB21C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */; };
@@ -59,8 +61,6 @@
 		AC178A841CA07AE3003333A2 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC178A811CA07AE3003333A2 /* Location+CoreDataProperties.swift */; };
 		AC178A851CA07AE3003333A2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC178A821CA07AE3003333A2 /* Location.swift */; };
 		AC178A861CA07AE3003333A2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC178A821CA07AE3003333A2 /* Location.swift */; };
-		ACB665DE1CA085C800C48F37 /* MyActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB665DD1CA085C800C48F37 /* MyActivityTableViewCell.swift */; };
-		ACB665DF1CA085C800C48F37 /* MyActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB665DD1CA085C800C48F37 /* MyActivityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8405691B1CA0A5850003EB09 /* MyActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivityTableViewCell.swift; sourceTree = "<group>"; };
+		8405691E1CA0A5CE0003EB09 /* MyActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivitiesViewController.swift; sourceTree = "<group>"; };
 		841FE21C1C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryCatering+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		841FE21D1C9F01C400C8DB54 /* CategoryCatering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCatering.swift; sourceTree = "<group>"; };
 		841FE21E1C9F01C400C8DB54 /* Speaker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Speaker+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -91,7 +93,6 @@
 		841FE2231C9F01C400C8DB54 /* CategoryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEvent.swift; sourceTree = "<group>"; };
 		841FE2241C9F01C400C8DB54 /* Catering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Catering+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		841FE2251C9F01C400C8DB54 /* Catering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catering.swift; sourceTree = "<group>"; };
-		8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivitiesViewController.swift; sourceTree = "<group>"; };
 		8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDetailViewController.swift; sourceTree = "<group>"; };
 		8480EFB41C9F2582003054F9 /* CateringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateringViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		849150521C9B6E58003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC178A811CA07AE3003333A2 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AC178A821CA07AE3003333A2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		ACB665DD1CA085C800C48F37 /* MyActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyActivityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 				8491502D1C9B6E57003FF5BB /* AppDelegate.swift */,
 				8491502F1C9B6E57003FF5BB /* ViewController.swift */,
 				8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */,
-				8480EFAB1C9F2466003054F9 /* MyActivitiesViewController.swift */,
+				8405691E1CA0A5CE0003EB09 /* MyActivitiesViewController.swift */,
 				8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */,
 				8480EFB11C9F2566003054F9 /* SpeakerDetailViewController.swift */,
 				8480EFB41C9F2582003054F9 /* CateringViewController.swift */,
@@ -199,7 +199,7 @@
 				8480EFC01C9F28C6003054F9 /* MapViewController.swift */,
 				849150311C9B6E57003FF5BB /* Main.storyboard */,
 				8480EFC31C9F3050003054F9 /* ActivityTableViewCell.swift */,
-				ACB665DD1CA085C800C48F37 /* MyActivityTableViewCell.swift */,
+				8405691B1CA0A5850003EB09 /* MyActivityTableViewCell.swift */,
 				8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */,
 				8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */,
 				849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */,
@@ -370,12 +370,11 @@
 				841FE2321C9F01C400C8DB54 /* CategoryEvent+CoreDataProperties.swift in Sources */,
 				8480EFB51C9F2582003054F9 /* CateringViewController.swift in Sources */,
 				AC178A851CA07AE3003333A2 /* Location.swift in Sources */,
-				ACB665DE1CA085C800C48F37 /* MyActivityTableViewCell.swift in Sources */,
 				8480EFC71C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */,
 				AC178A831CA07AE3003333A2 /* Location+CoreDataProperties.swift in Sources */,
-				8480EFAC1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */,
 				8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */,
 				841FE2261C9F01C400C8DB54 /* CategoryCatering+CoreDataProperties.swift in Sources */,
+				8405691F1CA0A5CE0003EB09 /* MyActivitiesViewController.swift in Sources */,
 				8480EFB21C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */,
 				8480EFC41C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */,
 				841FE2281C9F01C400C8DB54 /* CategoryCatering.swift in Sources */,
@@ -387,6 +386,7 @@
 				8480EFAF1C9F2530003054F9 /* ActivityDetailViewController.swift in Sources */,
 				849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */,
 				8480EFBB1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */,
+				8405691C1CA0A5850003EB09 /* MyActivityTableViewCell.swift in Sources */,
 				841FE2341C9F01C400C8DB54 /* CategoryEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,12 +417,12 @@
 				849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */,
 				8480EFB31C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */,
 				8480EFCB1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */,
-				8480EFAD1C9F2466003054F9 /* MyActivitiesViewController.swift in Sources */,
 				8480EFBC1C9F25B5003054F9 /* ActivitiesViewController.swift in Sources */,
 				AC178A861CA07AE3003333A2 /* Location.swift in Sources */,
+				840569201CA0A5CE0003EB09 /* MyActivitiesViewController.swift in Sources */,
 				8480EFB61C9F2582003054F9 /* CateringViewController.swift in Sources */,
-				ACB665DF1CA085C800C48F37 /* MyActivityTableViewCell.swift in Sources */,
 				8480EFB91C9F259A003054F9 /* CateringDetailViewController.swift in Sources */,
+				8405691D1CA0A5850003EB09 /* MyActivityTableViewCell.swift in Sources */,
 				AC178A841CA07AE3003333A2 /* Location+CoreDataProperties.swift in Sources */,
 				8480EFC81C9F3073003054F9 /* SpeakerTableViewCell.swift in Sources */,
 				8480EFC21C9F28C6003054F9 /* MapViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNX-71-4CO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNX-71-4CO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -51,47 +51,9 @@
                     <view key="view" contentMode="scaleToFill" id="yJY-Fu-b9J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Igs-4P-nqp">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myActivityCell" textLabel="xFr-Hi-qqf" style="IBUITableViewCellStyleDefault" id="Hsd-5q-380" customClass="MyActivityTableViewCell">
-                                        <rect key="frame" x="0.0" y="92" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hsd-5q-380" id="UCp-Ap-atJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xFr-Hi-qqf">
-                                                    <rect key="frame" x="15" y="0.0" width="364" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="myTitle" destination="xFr-Hi-qqf" id="e49-dd-lm6"/>
-                                            <segue destination="1qP-4o-iRh" kind="show" id="Okx-PL-Cv1"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Igs-4P-nqp" secondAttribute="trailing" constant="-20" id="8ol-6b-kpb"/>
-                            <constraint firstItem="bWf-Vx-7tt" firstAttribute="top" secondItem="Igs-4P-nqp" secondAttribute="bottom" id="IRT-66-bOe"/>
-                            <constraint firstItem="Igs-4P-nqp" firstAttribute="leading" secondItem="yJY-Fu-b9J" secondAttribute="leadingMargin" constant="-20" id="Udc-un-y4w"/>
-                            <constraint firstItem="Igs-4P-nqp" firstAttribute="top" secondItem="IX4-2M-iVM" secondAttribute="bottom" id="p1X-s3-M45"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Activities" id="Ode-dB-bxg"/>
-                    <connections>
-                        <outlet property="myTableView" destination="Igs-4P-nqp" id="NUR-1O-tgJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zt-3N-jaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,7 +465,4 @@
             <point key="canvasLocation" x="903" y="729"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Okx-PL-Cv1"/>
-    </inferredMetricsTieBreakers>
 </document>

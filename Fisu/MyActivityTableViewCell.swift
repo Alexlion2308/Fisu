@@ -2,7 +2,7 @@
 //  MyActivityTableViewCell.swift
 //  Fisu
 //
-//  Created by Alexandre on 21/03/2016.
+//  Created by vm mac on 21/03/2016.
 //  Copyright © 2016 Casati-Vasseur. All rights reserved.
 //
 
@@ -14,13 +14,11 @@ class MyActivityTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
-    @IBOutlet weak var myTitle: UILabel!
-    
+
 }
