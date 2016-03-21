@@ -17,11 +17,10 @@ extension Event {
     @NSManaged var beginDate: NSDate?
     @NSManaged var detail: String?
     @NSManaged var endDate: NSDate?
-    @NSManaged var latitude: NSNumber?
-    @NSManaged var longitude: NSNumber?
     @NSManaged var name: String?
     @NSManaged var picture: NSData?
-    @NSManaged var hasCategory: NSManagedObject?
+    @NSManaged var hasCategory: CategoryEvent?
+    @NSManaged var hasLocation: Location?
     @NSManaged var hasSpeakers: NSSet?
 
 }

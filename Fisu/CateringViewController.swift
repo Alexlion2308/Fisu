@@ -53,7 +53,7 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("cateringCell", forIndexPath: indexPath) as! CateringTableViewCell
         
         // Configure the cell...
-        cell.myCellTitle.text = "Exemple"
+        cell.myTitle.text = "Exemple"
         return cell
     }
 

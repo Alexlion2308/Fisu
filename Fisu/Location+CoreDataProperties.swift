@@ -1,8 +1,8 @@
 //
-//  Catering+CoreDataProperties.swift
+//  Location+CoreDataProperties.swift
 //  Fisu
 //
-//  Created by vm mac on 20/03/2016.
+//  Created by Alexandre on 21/03/2016.
 //  Copyright © 2016 Casati-Vasseur. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,12 +12,12 @@
 import Foundation
 import CoreData
 
-extension Catering {
+extension Location {
 
-    @NSManaged var detail: String?
     @NSManaged var name: String?
-    @NSManaged var picture: NSData?
-    @NSManaged var hasCategory: CategoryCatering?
-    @NSManaged var hasLocation: Location?
+    @NSManaged var latitude: NSNumber?
+    @NSManaged var longitude: NSNumber?
+    @NSManaged var caterings: NSSet?
+    @NSManaged var events: NSSet?
 
 }

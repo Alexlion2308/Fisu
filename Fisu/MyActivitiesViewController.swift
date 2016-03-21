@@ -8,11 +8,14 @@
 
 import UIKit
 
-class MyActivitiesViewController: UIViewController {
+class MyActivitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        //Adjust TableView to the top of the screen
+        self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +24,7 @@ class MyActivitiesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var myTableView: UITableView!
 
     /*
     // MARK: - Navigation
@@ -31,5 +35,27 @@ class MyActivitiesViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Table view data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myActivityCell", forIndexPath: indexPath) as! MyActivityTableViewCell
+        
+        // Configure the cell...
+        cell.myTitle.text = "Exemple"
+        return cell
+    }
+    
+    
+
 
 }

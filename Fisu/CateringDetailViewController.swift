@@ -13,8 +13,9 @@ class CateringDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myName.text = "Hello tout le monde bienvenue au restaurant de la casa de la casa sous casa de blabla ddddddd uuuuuuuuu ffhfhfhfh ryryyreere fhfdjfiuie fff efehfuidheiz fdf fnjezifzef jezifef"
-        self.myDetailText.textContainerInset = UIEdgeInsetsZero
+        self.myName.text = "Hello tout le monde bienvenue au restaurant de la casa de la casa sous casa de blabla ddddddd uuuuuuuuu ffhfhfhfh ryryyreere fhfdjfiuie fff efehfuidheiz fdf fnjezifzef jezifef"
+        self.myDetail.textContainerInset = UIEdgeInsetsZero
+        self.myCategory.text = "Pizza !"
         // Do any additional setup after loading the view.
     }
 
@@ -23,11 +24,13 @@ class CateringDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var myNavBarTitle: UINavigationItem!
     @IBOutlet weak var myName: UILabel!
-    @IBOutlet weak var myDetailText: UITextView!
+    @IBOutlet weak var myCategory: UILabel!
+    @IBOutlet weak var myDetail: UITextView!
     @IBOutlet weak var myMapView: MKMapView!
+    
 
+    
     /*
     // MARK: - Navigation
 
