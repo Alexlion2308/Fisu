@@ -74,6 +74,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="myTitle" destination="NCU-TG-nT5" id="6Ss-ub-Bwq"/>
+                                            <segue destination="1qP-4o-iRh" kind="show" id="eX0-Xn-beM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -502,4 +503,7 @@
             <point key="canvasLocation" x="903" y="729"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eX0-Xn-beM"/>
+    </inferredMetricsTieBreakers>
 </document>
