@@ -12,7 +12,10 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        //Adjust TableView to the top of the screen
+        self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
     }
 
