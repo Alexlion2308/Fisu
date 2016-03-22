@@ -21,6 +21,9 @@ class SpeakerDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var myName: UILabel!
+    @IBOutlet weak var myDesignation: UILabel!
+    @IBOutlet weak var myDetail: UITextView!
 
     /*
     // MARK: - Navigation

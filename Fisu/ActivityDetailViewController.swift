@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -15,6 +16,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         myTableView.dataSource = self
         myTableView.delegate = self
         //Adjust TableView to the top of the screen
+        self.myDetail.textContainerInset = UIEdgeInsetsZero
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
     }
@@ -24,8 +26,17 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBOutlet weak var myChosenOutlet: UIBarButtonItem!
+    @IBOutlet weak var myName: UILabel!
+    @IBOutlet weak var myCategory: UILabel!
+    @IBOutlet weak var myDetail: UITextView!
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var myMapView: MKMapView!
 
+    @IBAction func myChosenAction(sender: AnyObject) {
+        print("yolo")
+    }
     /*
     // MARK: - Navigation
 

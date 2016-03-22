@@ -2,7 +2,7 @@
 //  Speaker+CoreDataProperties.swift
 //  Fisu
 //
-//  Created by vm mac on 20/03/2016.
+//  Created by Alexandre on 22/03/2016.
 //  Copyright © 2016 Casati-Vasseur. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
