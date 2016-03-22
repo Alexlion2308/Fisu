@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNX-71-4CO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bNX-71-4CO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -67,7 +67,7 @@
                                                     <rect key="frame" x="15" y="0.0" width="364" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -110,15 +110,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dsu-Fc-n7g">
-                                <rect key="frame" x="0.0" y="420" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="101"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="Eck-Nt-9dI"/>
+                                    <constraint firstAttribute="height" constant="101" id="QRi-hB-Psb"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="speakerCell" textLabel="Xvy-MI-Jc8" style="IBUITableViewCellStyleDefault" id="Tqb-oj-ub9" customClass="SpeakerTableViewCell" customModule="Fisu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tqb-oj-ub9" id="UNO-cY-z2X">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -142,9 +142,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dsu-Fc-n7g" firstAttribute="top" secondItem="qVS-7P-xqo" secondAttribute="bottom" constant="356" id="IZC-ap-LE5"/>
-                            <constraint firstItem="dsu-Fc-n7g" firstAttribute="leading" secondItem="MdK-Wy-ixh" secondAttribute="leadingMargin" constant="-20" id="d3S-8b-3Xl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dsu-Fc-n7g" secondAttribute="trailing" constant="-20" id="sbG-dX-dOj"/>
+                            <constraint firstItem="dsu-Fc-n7g" firstAttribute="leading" secondItem="MdK-Wy-ixh" secondAttribute="leadingMargin" constant="-20" id="p1x-fW-Gpw"/>
+                            <constraint firstItem="dsu-Fc-n7g" firstAttribute="top" secondItem="qVS-7P-xqo" secondAttribute="bottom" id="qEl-If-rka"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dsu-Fc-n7g" secondAttribute="trailing" constant="-20" id="wFv-j6-buc"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
