@@ -37,6 +37,7 @@
 		8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */; };
 		849150461C9B6E57003FF5BB /* FisuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150451C9B6E57003FF5BB /* FisuTests.swift */; };
 		849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150501C9B6E58003FF5BB /* FisuUITests.swift */; };
+		AC71A1911CA305BB00BDC768 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC71A1901CA305BB00BDC768 /* Images.xcassets */; };
 		ACE038471CA1B9200098B053 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0383B1CA1B9200098B053 /* Location+CoreDataProperties.swift */; };
 		ACE038481CA1B9200098B053 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0383B1CA1B9200098B053 /* Location+CoreDataProperties.swift */; };
 		ACE038491CA1B9200098B053 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0383C1CA1B9200098B053 /* Location.swift */; };
@@ -106,6 +107,7 @@
 		8491504C1C9B6E58003FF5BB /* FisuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FisuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849150501C9B6E58003FF5BB /* FisuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisuUITests.swift; sourceTree = "<group>"; };
 		849150521C9B6E58003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC71A1901CA305BB00BDC768 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ACE0383B1CA1B9200098B053 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ACE0383C1CA1B9200098B053 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		ACE0383D1CA1B9200098B053 /* CategoryCatering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryCatering+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				849150371C9B6E57003FF5BB /* Assets.xcassets */,
 				8491503C1C9B6E57003FF5BB /* Info.plist */,
 				849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */,
+				AC71A1901CA305BB00BDC768 /* Images.xcassets */,
 			);
 			path = Fisu;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */,
+				AC71A1911CA305BB00BDC768 /* Images.xcassets in Resources */,
 				849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */,
 				849150331C9B6E57003FF5BB /* Main.storyboard in Resources */,
 			);
@@ -552,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fisu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -564,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Fisu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
