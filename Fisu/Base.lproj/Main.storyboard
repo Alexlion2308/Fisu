@@ -30,7 +30,7 @@
                             <constraint firstItem="KBf-iN-nsn" firstAttribute="top" secondItem="8Qq-0c-hSt" secondAttribute="bottom" id="xoo-mQ-KPh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="l9N-fi-w6h" userLabel="Map"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="l9N-fi-w6h" userLabel="Map"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="myMapView" destination="8Qq-0c-hSt" id="Qrf-V7-CaE"/>
@@ -646,7 +646,7 @@
         <scene sceneID="zRY-BA-1uu">
             <objects>
                 <navigationController title="My Activities Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="lga-Bm-bpp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Activities" id="Fr8-zq-OoE" userLabel="My Activities"/>
+                    <tabBarItem key="tabBarItem" title="My Activities" image="my activities" id="Fr8-zq-OoE" userLabel="My Activities"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lMt-EB-sbu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -665,7 +665,7 @@
         <scene sceneID="yVx-ci-Cic">
             <objects>
                 <navigationController title="Activities Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="WCH-gZ-Xei" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Activities" id="8A6-QW-jAo" userLabel="Activities"/>
+                    <tabBarItem key="tabBarItem" title="Activities" image="activities" id="8A6-QW-jAo" userLabel="Activities"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NoY-2T-8jU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -684,7 +684,7 @@
         <scene sceneID="qAq-4Q-dwP">
             <objects>
                 <navigationController title="Catering Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="pbI-F0-zqY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Caterings" id="0IJ-v8-qBc" userLabel="Catering"/>
+                    <tabBarItem key="tabBarItem" title="Caterings" image="caterings" id="0IJ-v8-qBc" userLabel="Catering"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cKn-Xf-Jhf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -700,6 +700,12 @@
             <point key="canvasLocation" x="903" y="729"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="activities" width="32" height="32"/>
+        <image name="caterings" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
+        <image name="my activities" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eX0-Xn-beM"/>
     </inferredMetricsTieBreakers>
