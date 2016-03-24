@@ -34,7 +34,6 @@
 		849150331C9B6E57003FF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150311C9B6E57003FF5BB /* Main.storyboard */; };
 		849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */; };
 		849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849150371C9B6E57003FF5BB /* Assets.xcassets */; };
-		8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */; };
 		849150461C9B6E57003FF5BB /* FisuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150451C9B6E57003FF5BB /* FisuTests.swift */; };
 		849150511C9B6E58003FF5BB /* FisuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849150501C9B6E58003FF5BB /* FisuUITests.swift */; };
 		AC71A1911CA305BB00BDC768 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC71A1901CA305BB00BDC768 /* Images.xcassets */; };
@@ -99,7 +98,6 @@
 		849150321C9B6E57003FF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849150351C9B6E57003FF5BB /* Fisu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fisu.xcdatamodel; sourceTree = "<group>"; };
 		849150371C9B6E57003FF5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8491503A1C9B6E57003FF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8491503C1C9B6E57003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849150411C9B6E57003FF5BB /* FisuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FisuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849150451C9B6E57003FF5BB /* FisuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisuTests.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				8405691B1CA0A5850003EB09 /* MyActivityTableViewCell.swift */,
 				8480EFC61C9F3073003054F9 /* SpeakerTableViewCell.swift */,
 				8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */,
-				849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */,
 				849150371C9B6E57003FF5BB /* Assets.xcassets */,
 				8491503C1C9B6E57003FF5BB /* Info.plist */,
 				849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */,
@@ -338,7 +335,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8491503B1C9B6E57003FF5BB /* LaunchScreen.storyboard in Resources */,
 				AC71A1911CA305BB00BDC768 /* Images.xcassets in Resources */,
 				849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */,
 				849150331C9B6E57003FF5BB /* Main.storyboard in Resources */,
@@ -458,14 +454,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		849150391C9B6E57003FF5BB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8491503A1C9B6E57003FF5BB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -562,6 +550,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.Fisu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -575,6 +564,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Casati-Vasseur.Fisu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -245,7 +245,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Activity" id="xtf-cH-aJg">
-                        <barButtonItem key="rightBarButtonItem" title="Chosen" style="plain" id="EaB-OJ-JBo">
+                        <barButtonItem key="rightBarButtonItem" title="Chosen" id="EaB-OJ-JBo">
                             <connections>
                                 <action selector="myChosenAction:" destination="1qP-4o-iRh" id="Dga-Jd-3JT"/>
                             </connections>
