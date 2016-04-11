@@ -96,8 +96,7 @@ class MapViewController: UIViewController {
             
             let mark = MKPointAnnotation()
             mark.coordinate = coordinate
-            mark.title = activity.name
-            mark.subtitle = activity.detail
+            mark.title = myLocation.name
 
             myMapView.addAnnotation(mark)
         }

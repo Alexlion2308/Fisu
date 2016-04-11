@@ -21,8 +21,11 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
+        let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
         var activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
-        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: , location: <#T##Location#>, speakers: <#T##NSSet#>)
+        var location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
+        location.setLocation(43.604634, longitude: 3.880842, name: "Gare Montpellier Saint-Roch")
+        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: nil, location: location, speakers: nil)
         
         
         do {
