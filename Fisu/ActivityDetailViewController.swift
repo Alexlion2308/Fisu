@@ -95,7 +95,9 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     
     
     func addMarkerOnMap() {
-        let myLocation : Location = self.activity.hasLocation!
+        guard let myLocation = self.activity.hasLocation else {
+            return
+        }
         let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
         let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.06,longitudeDelta: 0.06)))
         

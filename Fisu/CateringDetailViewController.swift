@@ -44,7 +44,10 @@ class CateringDetailViewController: UIViewController {
     */
 
     func addMarkerOnMap() {
-        let myLocation : Location = self.catering.hasLocation!
+
+        guard let myLocation = self.catering.hasLocation else {
+            return
+        }
         let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
         let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.06,longitudeDelta: 0.06)))
 
