@@ -22,4 +22,5 @@ class SpeakerTableViewCell: UITableViewCell {
     }
 
     @IBOutlet weak var myTitle: UILabel!
+    var speaker: Speaker!
 }

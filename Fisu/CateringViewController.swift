@@ -19,6 +19,7 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         self.automaticallyAdjustsScrollViewInsets = false
 
         // Do any additional setup after loading the view.
+        self.fetchCaterings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +28,8 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBOutlet weak var myTableView: UITableView!
+
+    var caterings : [Catering] = [Catering]()
 
     /*
     // MARK: - Navigation
@@ -45,7 +48,8 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        var nbElements = self.caterings.count
+        return nbElements
     }
     
     
@@ -53,9 +57,33 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("cateringCell", forIndexPath: indexPath) as! CateringTableViewCell
         
         // Configure the cell...
-        cell.myTitle.text = "Exemple"
+        cell.catering = self.caterings.getAtIndex(indexPath.row)
+        cell.myTitle.text = cell.catering.name
+        cell.myCategory.text = cell.catering.hasCategory
         return cell
     }
 
 
+    func fetchCaterings() {
+        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
+            return
+        }
+        let fetchRequest = NSFetchRequest(entityName: "Catering")
+        do {
+            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Catering] {
+                self.caterings = result // si ça ne marche pas, mettre les attributs un par un
+            }
+        } catch {
+            fatalError("There was an error fetching the caterings! \(error)")
+        }
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextView = segue.destinationViewController as! CateringDetailViewController
+        let cateringCell = sender as! CateringTableViewCell
+        nextView.catering = cateringCell.catering
+    }
+
+    override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+    }
 }

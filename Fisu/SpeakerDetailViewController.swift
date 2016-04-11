@@ -13,7 +13,9 @@ class SpeakerDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.myName.text = self.speaker.name
+        self.myDesignation.text = self.speaker.designation
+        self.myDetail.text = self.speaker.detail
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +27,7 @@ class SpeakerDetailViewController: UIViewController {
     @IBOutlet weak var myDesignation: UILabel!
     @IBOutlet weak var myDetail: UITextView!
 
+    var speaker : Speaker!
     /*
     // MARK: - Navigation
 

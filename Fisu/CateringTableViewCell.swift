@@ -23,5 +23,5 @@ class CateringTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myTitle: UILabel!
     @IBOutlet weak var myCategory: UILabel!
-    
+    var catering: Catering?
 }

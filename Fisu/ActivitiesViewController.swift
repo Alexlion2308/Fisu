@@ -17,6 +17,8 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
+
+        self.fetchActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +27,8 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBOutlet weak var myTableView: UITableView!
+
+    var activities: [Event]
 
     /*
     // MARK: - Navigation
@@ -43,19 +47,39 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.activities.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
-        
-        // Configure the cell...
-        cell.myTitle.text = "Exemple"
+        cell.activity = self.activities.getAtIndex(indexPath.row)
+        cell.myTitle.text = cell.activity.name
         return cell
     }
     
     
+    func fetchActivities() {
+        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
+            return
+        }
+        let fetchRequest = NSFetchRequest(entityName: "Event")
+        do {
+            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
+                self.activities = result // si ça ne marche pas, mettre les attributs un par un
+            }
+        } catch {
+            fatalError("There was an error fetching the activities! \(error)")
+        }
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextView = segue.destinationViewController as! ActivityDetailViewController
+        let activityCell = sender as! ActivityTableViewCell
+        nextView.catering = activityCell.activity
+    }
+
+    override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+    }
 
 }
