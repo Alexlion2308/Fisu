@@ -30,7 +30,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
             print("Error : \(error)")
         }
 
-        self.fetchActivities()
+        self.activities = Event.fetchActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,21 +68,6 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.activity = self.activities[indexPath.row]
         cell.myTitle.text = cell.activity.name
         return cell
-    }
-    
-    
-    func fetchActivities() {
-        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return
-        }
-        let fetchRequest = NSFetchRequest(entityName: "Event")
-        do {
-            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
-                self.activities = result // si ça ne marche pas, mettre les attributs un par un
-            }
-        } catch {
-            fatalError("There was an error fetching the activities! \(error)")
-        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

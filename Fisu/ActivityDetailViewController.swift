@@ -45,8 +45,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     var activity: Event!
 
     @IBAction func myChosenAction(sender: AnyObject) {
-        let app = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        self.activity.switchValue(app)
+        self.activity.switchValue()
     }
     /*
     // MARK: - Navigation
