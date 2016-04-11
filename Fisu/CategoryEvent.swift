@@ -12,12 +12,12 @@ import CoreData
 
 class CategoryEvent: NSManagedObject {
 
-    func setCategoyEvent(name:  String?) -> CategoryEvent {
+    func setCategoryEvent(name:  String?) -> CategoryEvent {
         self.name = name
         return self
     }
     
-    func setCategoyEvent(name:  String?, events : NSSet?) -> CategoryEvent {
+    func setCategoryEvent(name:  String?, events : NSSet?) -> CategoryEvent {
         self.name = name
         self.hasEvents = events
         return self

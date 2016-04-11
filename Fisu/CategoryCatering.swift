@@ -12,12 +12,12 @@ import CoreData
 
 class CategoryCatering: NSManagedObject {
     
-    func setCategoyCatering(name : String?) -> CategoryCatering {
+    func setCategoryCatering(name : String?) -> CategoryCatering {
         self.name = name
         return self
     }
     
-    func setCategoyCatering(name : String?, caterings : NSSet?) -> CategoryCatering {
+    func setCategoryCatering(name : String?, caterings : NSSet?) -> CategoryCatering {
         self.name = name
         self.hasCaterings = caterings
         return self
