@@ -12,7 +12,7 @@ import CoreData
 
 class Speaker: NSManagedObject {
     
-    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?) -> Speaker {
+    func setSpeaker(designation : String?, detail : String?, name:  String?, surname : String?) -> Speaker {
         self.designation = designation
         self.detail = detail
         self.name = name
@@ -20,7 +20,7 @@ class Speaker: NSManagedObject {
         return self
     }
     
-    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?, speaksEvents : NSSet?) -> Speaker {
+    func setSpeaker(designation : String?, detail : String?, name:  String?, surname : String?, speaksEvents : NSSet?) -> Speaker {
         self.designation = designation
         self.detail = detail
         self.name = name
