@@ -19,7 +19,10 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         self.myDetail.textContainerInset = UIEdgeInsetsZero
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
-
+        guard let aname = self.activity.name else {
+            return
+        }
+        self.myName.text = aname
         guard let category = self.activity.hasCategory else {
             return
         }

@@ -12,7 +12,19 @@ import UIKit
 
 class Catering: NSManagedObject {
     
+    func setCatering(detail : String?, name : String?) -> Catering {
+        self.detail = detail
+        self.name = name
+        return self
+    }
     
+    func setCatering(detail : String?, name : String?, category : CategoryCatering?, location : Location?) -> Catering {
+        self.detail = detail
+        self.name = name
+        self.hasCategory = category
+        self.hasLocation = location
+        return self
+    }
     
     static func fetchCaterings() -> [Catering] {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
