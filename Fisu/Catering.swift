@@ -32,7 +32,7 @@ class Catering: NSManagedObject {
         let fetchRequest = NSFetchRequest(entityName: "Catering")
         do {
             let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Catering]
-            return result! // si ça ne marche pas, mettre les attributs un par un
+            return result!
         } catch {
             fatalError("There was an error fetching the caterings! \(error)")
         }

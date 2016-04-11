@@ -33,8 +33,6 @@ class Event: NSManagedObject {
         return self
     }
     
-    
-// Insert code here to add functionality to your managed object subclass
     func switchValue() {
         
         guard let isChosen = self.chosen else {
@@ -56,7 +54,7 @@ class Event: NSManagedObject {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "beginDate", ascending: true)]
         do {
             let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
-            return result! // si ça ne marche pas, mettre les attributs un par un
+            return result!
         } catch {
             fatalError("There was an error fetching the activities! \(error)")
         }
@@ -70,7 +68,7 @@ class Event: NSManagedObject {
         fetchRequest.predicate = NSPredicate(format : "chosen == true")
         do {
             let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
-            return result! // si ça ne marche pas, mettre les attributs un par un
+            return result!
         } catch {
             fatalError("There was an error fetching my activities! \(error)")
         }

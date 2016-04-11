@@ -30,7 +30,6 @@
 		8480EFCA1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */; };
 		8480EFCB1C9F3086003054F9 /* CateringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */; };
 		8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502D1C9B6E57003FF5BB /* AppDelegate.swift */; };
-		849150301C9B6E57003FF5BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491502F1C9B6E57003FF5BB /* ViewController.swift */; };
 		849150331C9B6E57003FF5BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849150311C9B6E57003FF5BB /* Main.storyboard */; };
 		849150361C9B6E57003FF5BB /* Fisu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */; };
 		849150381C9B6E57003FF5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849150371C9B6E57003FF5BB /* Assets.xcassets */; };
@@ -95,7 +94,6 @@
 		8480EFC91C9F3086003054F9 /* CateringTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateringTableViewCell.swift; sourceTree = "<group>"; };
 		8491502A1C9B6E57003FF5BB /* Fisu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fisu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8491502D1C9B6E57003FF5BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8491502F1C9B6E57003FF5BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		849150321C9B6E57003FF5BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		849150351C9B6E57003FF5BB /* Fisu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fisu.xcdatamodel; sourceTree = "<group>"; };
 		849150371C9B6E57003FF5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 			children = (
 				841FE21B1C9F017C00C8DB54 /* Business Logic */,
 				8491502D1C9B6E57003FF5BB /* AppDelegate.swift */,
-				8491502F1C9B6E57003FF5BB /* ViewController.swift */,
 				8480EFBA1C9F25B5003054F9 /* ActivitiesViewController.swift */,
 				8405691E1CA0A5CE0003EB09 /* MyActivitiesViewController.swift */,
 				8480EFAE1C9F2530003054F9 /* ActivityDetailViewController.swift */,
@@ -365,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849150301C9B6E57003FF5BB /* ViewController.swift in Sources */,
 				ACE0384F1CA1B9200098B053 /* CategoryEvent+CoreDataProperties.swift in Sources */,
 				8480EFC11C9F28C6003054F9 /* MapViewController.swift in Sources */,
 				ACE038491CA1B9200098B053 /* Location.swift in Sources */,

@@ -18,7 +18,6 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         //Adjust TableView to the top of the screen
         self.myDetail.textContainerInset = UIEdgeInsetsZero
         self.automaticallyAdjustsScrollViewInsets = false
-        // Do any additional setup after loading the view.
         guard let aname = self.activity.name else {
             return
         }
@@ -28,6 +27,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         }
         self.myCategory.text = category.name
         self.myDetail.text = self.activity.detail
+        self.addMarkerOnMap()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,10 +53,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     @IBAction func myChosenAction(sender: AnyObject) {
         self.activity.switchValue()
     }
-/*    @IBAction func myChosenAction(sender: AnyObject) {
-        let app = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        self.activity.switchValue(app)
-    } */
+
     /*
     // MARK: - Navigation
 
@@ -95,4 +92,22 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
     }
+    
+    
+    func addMarkerOnMap() {
+        let myLocation : Location = self.activity.hasLocation!
+        let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+        let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.06,longitudeDelta: 0.06)))
+        
+        let mark = MKPointAnnotation()
+        mark.coordinate = coordinate
+        mark.title = self.activity.name
+        mark.subtitle = self.activity.detail
+        
+        myMapView.addAnnotation(mark)
+        myMapView.centerCoordinate = coordinate
+        myMapView.setRegion(myRegion, animated: true)
+    }
+    
+
 }

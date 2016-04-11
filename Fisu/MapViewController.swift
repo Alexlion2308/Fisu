@@ -53,6 +53,10 @@ class MapViewController: UIViewController {
             let pin = myMapView.dequeueReusableAnnotationViewWithIdentifier("MyIdentifier") as? MKPinAnnotationView
             pin?.pinTintColor = UIColor.blueColor()
         }
+        let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 43.621, longitude: 3.872433)
+        let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.07,longitudeDelta: 0.07)))
+        myMapView.centerCoordinate = coordinate
+        myMapView.setRegion(myRegion, animated: true)
     }
 
 }

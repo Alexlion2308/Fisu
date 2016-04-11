@@ -17,7 +17,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
         myTableView.delegate = self
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,6 +33,19 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var myTableView: UITableView!
 
     var myActivities: [Event] = [Event]()
+    static var hourFormatter : NSDateFormatter = {
+        let df = NSDateFormatter()
+        df.dateFormat = "HH:mm"
+        return df
+    }()
+    
+    //PIERRE JE T'AI MIS A DISPOSITION LE DATEFORMATER CI DESSOUS REGARDE COMMENT ON FORMATE 3 fonctions en dessous
+    static var dateFormatter : NSDateFormatter = {
+        let df = NSDateFormatter()
+        df.dateFormat = "EEEE, MMMM d, y"
+        return df
+    }()
+
 
     /*
     // MARK: - Navigation
@@ -60,6 +73,15 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier("myActivityCell", forIndexPath: indexPath) as! MyActivityTableViewCell
         cell.activity = self.myActivities[indexPath.row]
         cell.myTitle.text = cell.activity.name
+        var temp : String = ""
+        if let _=cell.activity.beginDate {
+            temp = MyActivitiesViewController.hourFormatter.stringFromDate(cell.activity.beginDate!)
+        }
+        if let _=cell.activity.endDate {
+            temp = temp + "-"
+            temp = temp + MyActivitiesViewController.hourFormatter.stringFromDate(cell.activity.endDate!)
+        }
+        cell.myDate.text = temp
         return cell
     }
 

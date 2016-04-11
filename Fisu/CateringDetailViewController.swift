@@ -17,7 +17,6 @@ class CateringDetailViewController: UIViewController {
         self.myName.text = self.catering.name
         self.myDetail.text = self.catering.detail
         self.myCategory.text = self.catering.hasCategory!.name
-
         self.addMarkerOnMap()
         // Do any additional setup after loading the view.
     }
@@ -47,7 +46,7 @@ class CateringDetailViewController: UIViewController {
     func addMarkerOnMap() {
         let myLocation : Location = self.catering.hasLocation!
         let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
-        let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)))
+        let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.06,longitudeDelta: 0.06)))
 
         let mark = MKPointAnnotation()
         mark.coordinate = coordinate

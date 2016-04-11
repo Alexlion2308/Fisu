@@ -22,6 +22,5 @@ class CategoryCatering: NSManagedObject {
         self.hasCaterings = caterings
         return self
     }
-// Insert code here to add functionality to your managed object subclass
-
+    
 }

@@ -28,6 +28,4 @@ class Speaker: NSManagedObject {
         self.speaksEvents = speaksEvents
         return self
     }
-// Insert code here to add functionality to your managed object subclass
-
 }

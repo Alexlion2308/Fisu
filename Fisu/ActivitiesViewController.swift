@@ -17,22 +17,6 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         myTableView.delegate = self
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
-        // Do any additional setup after loading the view.
-        
-        /*let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
-        let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
-        let activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
-        let location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
-        location.setLocation(43.604634, longitude: 3.880842, name: "Gare Montpellier Saint-Roch")
-        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: nil, location: location, speakers: nil)
-        
-        
-        do {
-            try moc.save()
-        } catch let error as NSError {
-            print("Error : \(error)")
-        } */
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,6 +31,19 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var myTableView: UITableView!
 
     var activities: [Event] = [Event]()
+    static var hourFormatter : NSDateFormatter = {
+        let df = NSDateFormatter()
+        df.dateFormat = "HH:mm"
+        return df
+    }()
+    
+    //PIERRE JE T'AI MIS A DISPOSITION LE DATEFORMATER CI DESSOUS REGARDE COMMENT ON FORMATE 3 fonctions en dessous
+    static var dateFormatter : NSDateFormatter = {
+        let df = NSDateFormatter()
+        df.dateFormat = "EEEE, MMMM d, y"
+        return df
+    }()
+    
 
     /*
     // MARK: - Navigation
@@ -73,6 +70,15 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
         cell.activity = self.activities[indexPath.row]
         cell.myTitle.text = cell.activity.name
+        var temp : String = ""
+        if let _=cell.activity.beginDate {
+            temp = ActivitiesViewController.hourFormatter.stringFromDate(cell.activity.beginDate!)
+        }
+        if let _=cell.activity.endDate {
+            temp = temp + "-"
+            temp = temp + ActivitiesViewController.hourFormatter.stringFromDate(cell.activity.endDate!)
+        }
+        cell.myDate.text = temp
         return cell
     }
 

@@ -12,8 +12,15 @@ class SpeakerDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.myName.text = self.speaker.name
+        var temp : String = ""
+        if let _=self.speaker.name {
+            temp = temp + self.speaker.name!
+        }
+        if let _=self.speaker.surname {
+            temp = temp + " "
+            temp = temp + self.speaker.surname!
+        }
+        self.myName.text = temp
         self.myDesignation.text = self.speaker.designation
         self.myDetail.text = self.speaker.detail
     }
@@ -28,6 +35,7 @@ class SpeakerDetailViewController: UIViewController {
     @IBOutlet weak var myDetail: UITextView!
 
     var speaker : Speaker!
+    
     /*
     // MARK: - Navigation
 

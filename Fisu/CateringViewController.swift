@@ -18,8 +18,6 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         myTableView.delegate = self
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
-
-        // Do any additional setup after loading the view.
         self.caterings = Catering.fetchCaterings()
     }
 
