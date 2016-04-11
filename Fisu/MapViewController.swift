@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController {
 
@@ -72,28 +73,34 @@ class MapViewController: UIViewController {
     }
 
     func addMarkersOnMap() {
+        print(self.activities.count)
+        print(self.caterings.count)
+        
         for catering : Catering in self.caterings {
-            let myLocation : Location = self.catering.hasLocation
-            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude, longitude: myLocation.longitude)
-
-            var mark = MKPointAnnotation()
+            guard let location = catering.hasLocation else {
+                return
+            }
+            let myLocation : Location = location
+            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+            let mark = MKPointAnnotation()
             mark.coordinate = coordinate
-            mark.title = catering.name
-            mark.subtitle = catering.detail
+            mark.title = myLocation.name
 
-            myMapView.addAnnotation(myLocation)
+            myMapView.addAnnotation(mark)
         }
 
         for activity : Event in self.activities {
-            let myLocation : Location = self.activity.hasLocation
-            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude, longitude: myLocation.longitude)
-
-            var mark = MKPointAnnotation()
+            guard let location = activity.hasLocation else {
+                return
+            }
+            let myLocation : Location = location
+            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+            
+            let mark = MKPointAnnotation()
             mark.coordinate = coordinate
-            mark.title = activity.name
-            mark.subtitle = activity.detail
+            mark.title = myLocation.name
 
-            myMapView.addAnnotation(myLocation)
+            myMapView.addAnnotation(mark)
         }
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CateringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -48,7 +49,7 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var nbElements = self.caterings.count
+        let nbElements = self.caterings.count
         return nbElements
     }
     
@@ -57,9 +58,9 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("cateringCell", forIndexPath: indexPath) as! CateringTableViewCell
         
         // Configure the cell...
-        cell.catering = self.caterings.getAtIndex(indexPath.row)
-        cell.myTitle.text = cell.catering.name
-        cell.myCategory.text = cell.catering.hasCategory
+        cell.catering = self.caterings[indexPath.row]
+        cell.myTitle.text = cell.catering!.name
+        cell.myCategory.text = cell.catering!.hasCategory!.name
         return cell
     }
 

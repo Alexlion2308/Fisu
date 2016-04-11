@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myActivityCell" textLabel="NCU-TG-nT5" style="IBUITableViewCellStyleDefault" id="B0x-jd-bsR" customClass="MyActivityTableViewCell" customModule="Fisu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myActivityCell" textLabel="NCU-TG-nT5" detailTextLabel="KDR-Yn-VlM" style="IBUITableViewCellStyleValue1" id="B0x-jd-bsR" customClass="MyActivityTableViewCell" customModule="Fisu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B0x-jd-bsR" id="Tdm-6t-yrO">
@@ -64,15 +64,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NCU-TG-nT5">
-                                                    <rect key="frame" x="15" y="0.0" width="364" height="43"/>
+                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KDR-Yn-VlM">
+                                                    <rect key="frame" x="347" y="14" width="32" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="myDate" destination="KDR-Yn-VlM" id="WYn-QM-p5D"/>
                                             <outlet property="myTitle" destination="NCU-TG-nT5" id="6Ss-ub-Bwq"/>
                                             <segue destination="1qP-4o-iRh" kind="show" id="eX0-Xn-beM"/>
                                         </connections>
@@ -202,7 +210,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="myTitle" destination="Xvy-MI-Jc8" id="PU5-n3-emA"/>
+                                            <outlet property="myTitle" destination="Xvy-MI-Jc8" id="Vef-p9-BiQ"/>
                                             <segue destination="qz1-yQ-RLe" kind="show" id="fa1-y1-ivn"/>
                                         </connections>
                                     </tableViewCell>
@@ -392,7 +400,7 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cateringCell" textLabel="WW6-lb-spl" detailTextLabel="Hsp-ay-5Xj" style="IBUITableViewCellStyleValue1" id="BIQ-a1-UGb" customClass="CateringTableViewCell" customModule="Fisu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cateringCell" textLabel="WW6-lb-spl" detailTextLabel="X1P-nf-lqC" style="IBUITableViewCellStyleValue1" id="BIQ-a1-UGb" customClass="CateringTableViewCell" customModule="Fisu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BIQ-a1-UGb" id="kGR-3i-E6f">
@@ -406,7 +414,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hsp-ay-5Xj">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X1P-nf-lqC">
                                                     <rect key="frame" x="317" y="14" width="62" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -416,7 +424,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="myCategory" destination="Hsp-ay-5Xj" id="J9m-8x-wN1"/>
+                                            <outlet property="myCategory" destination="X1P-nf-lqC" id="7ZD-1Q-oD8"/>
                                             <outlet property="myTitle" destination="WW6-lb-spl" id="BNa-z6-rwB"/>
                                             <segue destination="wE7-PY-9BJ" kind="show" id="qMC-TI-JHF"/>
                                         </connections>
@@ -580,23 +588,31 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="activityCell" textLabel="oP9-El-VhM" style="IBUITableViewCellStyleDefault" id="ouO-YB-8HN" customClass="ActivityTableViewCell" customModule="Fisu" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="activityCell" textLabel="oP9-El-VhM" detailTextLabel="Pr6-gM-LzA" style="IBUITableViewCellStyleValue1" id="ouO-YB-8HN" customClass="ActivityTableViewCell" customModule="Fisu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ouO-YB-8HN" id="HXV-Fx-0Oc">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oP9-El-VhM">
-                                                    <rect key="frame" x="15" y="0.0" width="364" height="43"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="oP9-El-VhM">
+                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pr6-gM-LzA">
+                                                    <rect key="frame" x="347" y="14" width="32" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="myDate" destination="Pr6-gM-LzA" id="Fjs-ac-Gpw"/>
                                             <outlet property="myTitle" destination="oP9-El-VhM" id="jps-8V-efG"/>
                                             <segue destination="1qP-4o-iRh" kind="show" id="E2l-iU-Smq"/>
                                         </connections>

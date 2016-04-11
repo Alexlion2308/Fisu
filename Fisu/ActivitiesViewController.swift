@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -17,6 +18,21 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
+        
+        let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
+        let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
+        var activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
+        var location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
+        location.setLocation(43.604634, longitude: 3.880842, name: "Gare Montpellier Saint-Roch")
+        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: nil, location: location, speakers: nil)
+        
+        
+        do {
+            try moc.save()
+        } catch let error as NSError {
+            print("Error : \(error)")
+        }
 
         self.fetchActivities()
     }
@@ -28,7 +44,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var myTableView: UITableView!
 
-    var activities: [Event]
+    var activities: [Event] = [Event]()
 
     /*
     // MARK: - Navigation
@@ -53,7 +69,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
-        cell.activity = self.activities.getAtIndex(indexPath.row)
+        cell.activity = self.activities[indexPath.row]
         cell.myTitle.text = cell.activity.name
         return cell
     }
@@ -76,7 +92,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextView = segue.destinationViewController as! ActivityDetailViewController
         let activityCell = sender as! ActivityTableViewCell
-        nextView.catering = activityCell.activity
+        nextView.activity = activityCell.activity
     }
 
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {

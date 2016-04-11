@@ -22,6 +22,7 @@ class MyActivityTableViewCell: UITableViewCell {
     }
 
     @IBOutlet weak var myTitle: UILabel!
+    @IBOutlet weak var myDate: UILabel!
 
     var activity : Event!
 }

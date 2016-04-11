@@ -15,8 +15,8 @@ class CateringDetailViewController: UIViewController {
         super.viewDidLoad()
 
         self.myName.text = self.catering.name
-        self.myDetail.textContainerInset = self.catering.detail
-        self.myCategory.text = self.catering.hasCategory.name
+        self.myDetail.text = self.catering.detail
+        self.myCategory.text = self.catering.hasCategory!.name
 
         self.addMarkerOnMap()
         // Do any additional setup after loading the view.
@@ -45,16 +45,16 @@ class CateringDetailViewController: UIViewController {
     */
 
     func addMarkerOnMap() {
-        let myLocation : Location = self.catering.hasLocation
-        let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude, longitude: myLocation.longitude)
+        let myLocation : Location = self.catering.hasLocation!
+        let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
         let myRegion : MKCoordinateRegion = MKCoordinateRegion(center: coordinate, span: (MKCoordinateSpan(latitudeDelta: 0.1,longitudeDelta: 0.1)))
 
-        var mark = MKPointAnnotation()
+        let mark = MKPointAnnotation()
         mark.coordinate = coordinate
         mark.title = self.catering.name
         mark.subtitle = self.catering.detail
 
-        myMapView.addAnnotation(myLocation)
+        myMapView.addAnnotation(mark)
         myMapView.centerCoordinate = coordinate
         myMapView.setRegion(myRegion, animated: true)
     }

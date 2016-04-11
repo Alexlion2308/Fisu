@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -28,7 +29,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var myTableView: UITableView!
 
-    var myActivities: [Event]
+    var myActivities: [Event] = [Event]()
 
     /*
     // MARK: - Navigation
@@ -54,7 +55,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("myActivityCell", forIndexPath: indexPath) as! MyActivityTableViewCell
-        cell.activity = self.myActivities.getAtIndex(indexPath.row)
+        cell.activity = self.myActivities[indexPath.row]
         cell.myTitle.text = cell.activity.name
         return cell
     }
@@ -65,7 +66,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
             return
         }
         let fetchRequest = NSFetchRequest(entityName: "Event")
-        fetchRequest.predicate = NSPredicate(format : "chosen : %@", [NSNumber numberWithBool:YES])
+        fetchRequest.predicate = NSPredicate(format : "chosen == true")
         do {
             if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
                 self.myActivities = result // si ça ne marche pas, mettre les attributs un par un
@@ -78,7 +79,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextView = segue.destinationViewController as! ActivityDetailViewController
         let activityCell = sender as! ActivityTableViewCell
-        nextView.catering = activityCell.activity
+        nextView.activity = activityCell.activity
     }
 
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {

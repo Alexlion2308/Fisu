@@ -11,7 +11,23 @@ import CoreData
 
 
 class Speaker: NSManagedObject {
-
+    
+    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?) -> Speaker {
+        self.designation = designation
+        self.detail = detail
+        self.name = name
+        self.surname = surname
+        return self
+    }
+    
+    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?, speaksEvents : NSSet?) -> Speaker {
+        self.designation = designation
+        self.detail = detail
+        self.name = name
+        self.surname = surname
+        self.speaksEvents = speaksEvents
+        return self
+    }
 // Insert code here to add functionality to your managed object subclass
 
 }

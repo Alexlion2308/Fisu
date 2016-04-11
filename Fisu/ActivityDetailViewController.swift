@@ -22,7 +22,10 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
 
         self.myChosenOutlet.title = self.activity.name
         self.myName.text = self.activity.name
-        self.myCategory.text = self.activity.hasCategory.name
+        guard let category = self.activity.hasCategory else {
+            return
+        }
+        self.myCategory.text = category.name
         self.myDetail.text = self.activity.detail
     }
 
@@ -42,7 +45,8 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     var activity: Event!
 
     @IBAction func myChosenAction(sender: AnyObject) {
-        print("yolo")
+        let app = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        self.activity.switchValue(app)
     }
     /*
     // MARK: - Navigation
@@ -62,14 +66,14 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let speakers = self.activity.hasSpeakers as! [Speaker]
+        let speakers = self.activity.hasSpeakers?.allObjects as! [Speaker]
         return speakers.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("speakerCell", forIndexPath: indexPath) as! SpeakerTableViewCell
-        cell.speaker = self.speakers.getAtIndex(indxPath.row)
+        cell.speaker = (self.activity.hasSpeakers?.allObjects as! [Speaker])[indexPath.row]
         cell.myTitle.text = cell.speaker.name
         return cell
     }
