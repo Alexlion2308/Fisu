@@ -95,54 +95,189 @@ class FactoryInit {
                 let categoryCateringS: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
                 categoryCateringS.setCategoryCatering("Snack")
                 
-                let categoryCateringPN: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
-                categoryCateringPN.setCategoryCatering("Pique-nique")
+                let categoryCateringR: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
+                categoryCateringR.setCategoryCatering("Restaurant")
 
                 // Set CategoryEvent
                 let categoryEventSport: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
                 categoryEventSport.setCategoryEvent("Sport")
                 
-                let categoryEventCongress: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
-                categoryEventCongress.setCategoryEvent("Congress")
-                
-                let categoryEventShow: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
-                categoryEventShow.setCategoryEvent("Show")
+                let categoryEventVisit: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventVisit.setCategoryEvent("Visit")
                 
                 let categoryEventForum: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
                 categoryEventForum.setCategoryEvent("Forum")
                 
-                let categoryEventSeminar: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
-                categoryEventSeminar.setCategoryEvent("Seminar")
+                let categoryEventEat: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventEat.setCategoryEvent("Eat")
+                
+                let categoryEventPause: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventPause.setCategoryEvent("Pause")
+                
+                let categoryEventChange: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventChange.setCategoryEvent("Exchange")
+                
                 
                 // Set Speakers
-                let speakerSC: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speakerSC.setSpeaker("Baroness", detail: "Great Britain, Chair of UK Sport", name: "Campbell", surname: "Sue")
+                let speaker1: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speaker1.setSpeaker("Baroness", detail: "Great Britain, Chair of UK Sport", name: "Campbell", surname: "Sue")
                 
-                let speakerPW: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speakerPW.setSpeaker("Professor", detail: "Brussel, Belgium, Vrije Universitet", name: "Wylleman", surname: "Paul")
+                let speaker2: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speaker2.setSpeaker("Professor", detail: "Brussel, Belgium, Vrije Universitet", name: "Wylleman", surname: "Paul")
                 
-                let speakerMD: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speakerMD.setSpeaker("Director", detail: "Autralia, Monash University, Monash Sport", name: "Doulton", surname: "Martin")
+                let speaker3: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speaker3.setSpeaker("Director", detail: "Autralia, Monash University, Monash Sport", name: "Doulton", surname: "Martin")
                 
-                let speakerOM: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speakerOM.setSpeaker("Professor", detail: "Russia, Russian State University of Physical Education, Sport and Tourism", name: "Matysin", surname: "Oleg")
+                let speaker4: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speaker4.setSpeaker("Professor", detail: "Russia, Russian State University of Physical Education, Sport and Tourism", name: "Matysin", surname: "Oleg")
 
-                let speakerME: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speakerME.setSpeaker("CEO", detail: "Sweden, World Village of Women Sports", name: "Eggertz-Forsmark", surname: "Malin")
+                let speaker5: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speaker5.setSpeaker("CEO", detail: "Sweden, World Village of Women Sports", name: "Eggertz-Forsmark", surname: "Malin")
                 
                 // Speakers Sets Creating
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
                 var speakersSet2 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet3 : Set<Speaker> = Set<Speaker>()
+                var speakersSet4 : Set<Speaker> = Set<Speaker>()
+                var speakersSet5 : Set<Speaker> = Set<Speaker>()
+                var speakersSet6 : Set<Speaker> = Set<Speaker>()
+                var speakersSet7 : Set<Speaker> = Set<Speaker>()
+                var speakersSet8 : Set<Speaker> = Set<Speaker>()
+                var speakersSet9 : Set<Speaker> = Set<Speaker>()
+                
+                speakersSet1.insert(speaker1)
+                speakersSet1.insert(speaker4)
+                
+                speakersSet2.insert(speaker5)
+                
+                speakersSet3.insert(speaker2)
+                speakersSet3.insert(speaker5)
+                speakersSet3.insert(speaker3)
+                speakersSet3.insert(speaker4)
+                
+                speakersSet4.insert(speaker5)
+                speakersSet4.insert(speaker4)
+                speakersSet4.insert(speaker1)
+                
+                speakersSet5.insert(speaker1)
+                speakersSet5.insert(speaker2)
+                speakersSet5.insert(speaker3)
+                speakersSet5.insert(speaker4)
+                
+                speakersSet6.insert(speaker2)
+                
+                speakersSet7.insert(speaker2)
+                speakersSet7.insert(speaker4)
+                
+                speakersSet8.insert(speaker5)
+                speakersSet8.insert(speaker3)
+                speakersSet8.insert(speaker4)
+                
+                speakersSet9.insert(speaker3)
 
+                
+                // Set Events
 
+                let event1: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event1.setEvent( NSDate(timeIntervalSince1970: 1467615600), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: 1467628200), name: "Opening Ceremony", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet1)
 
+                let event2: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event2.setEvent( NSDate(timeIntervalSince1970: 1467628200), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: 1467632700), name: "Lunch", category: categoryEventEat, location: locationSaintCharles, speakers: speakersSet2)
+                
+                let event3: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event3.setEvent( NSDate(timeIntervalSince1970: 1467632700), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: 1467635400), name: "UNESCO session", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet3)
+
+                let event4: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event4.setEvent( NSDate(timeIntervalSince1970: 1467634500), chosen: false, detail: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit", endDate: NSDate(timeIntervalSince1970: 1467638100), name: "Introduction to the week’s aims/methodology", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet4)
+
+                let event5: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event5.setEvent( NSDate(timeIntervalSince1970: 1467638100), chosen: false, detail: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut", endDate: NSDate(timeIntervalSince1970: 1467639000), name: "Coffee break", category: categoryEventPause, location: locationLawFaculty, speakers: speakersSet5)
+                
+                let event6: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event6.setEvent( NSDate(timeIntervalSince1970: 1467639000), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: 1467642600), name: "Definition of project working groups", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet6)
+                
+                let event7: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event7.setEvent( NSDate(timeIntervalSince1970: 1467642600), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: 1467644400), name: "Transition to ice-breaking activity", category: categoryEventChange, location: nil, speakers: speakersSet7)
+                
+                let event8: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event8.setEvent( NSDate(timeIntervalSince1970: 1467644400), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: 1467651600), name: "Boules/pétanque", category: categoryEventSport, location: locationTriolet, speakers: speakersSet8)
+                
+                let event9: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event9.setEvent( NSDate(timeIntervalSince1970: 1467651600), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: 1467654300), name: "Transition /clothing change", category: categoryEventChange, location: nil, speakers: speakersSet9)
+                
+                let event10: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event10.setEvent( NSDate(timeIntervalSince1970: 1467654300), chosen: false, detail: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut", endDate: NSDate(timeIntervalSince1970: 1467662400), name: "Official reception/opening dinner", category: categoryEventEat, location: locationRectorat, speakers: speakersSet1)
+                
+                let event11: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event11.setEvent( NSDate(timeIntervalSince1970: 1467702000), chosen: false, detail: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", endDate: NSDate(timeIntervalSince1970: 1467705600), name: "Plenary session: Values/Ethics/Integrity", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet2)
+                
+                let event12: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event12.setEvent( NSDate(timeIntervalSince1970: 1467705600), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: 1467709200), name: "Workshops:  Values/Ethics/Integrity", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet3)
+                
+                let event13: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event13.setEvent( NSDate(timeIntervalSince1970: 1467710100), chosen: false, detail: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit", endDate: NSDate(timeIntervalSince1970: 1467711000), name: "Coffee break", category: categoryEventPause, location: locationSaintCharles, speakers: speakersSet4)
+/*
+                let event14: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event14.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut", endDate: NSDate(timeIntervalSince1970: ), name: "Project working session", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet5)
+                
+                let event15: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event15.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: ), name: "Lunch", category: categoryEventEat, location: locationSaintCharles, speakers: speakersSet6)
+                
+                let event16: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event16.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: ), name: "Plenary session: Health/Social Care/Anti-doping", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet7)
+                
+                let event17: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event17.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit", endDate: NSDate(timeIntervalSince1970: ), name: "Workshops Health/Social Care/Anti-doping", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet8)
+                
+                let event18: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event18.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", endDate: NSDate(timeIntervalSince1970: ), name: "Coffee break", category: categoryEventPause, location: locationSaintCharles, speakers: speakersSet9)
+                
+                let event19: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event19.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", endDate: NSDate(timeIntervalSince1970: ), name: "Transition to cultural activity", category: categoryEventChange, location: nil, speakers: speakersSet1)
+                
+                let event20: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event20.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: ), name: "Visit of Montpellier", category: categoryEventVisit, location: nil, speakers: speakersSet2)
+                
+                let event21: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event21.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: ), name: "Dinner", category: categoryEventEat, location: locationTriolet, speakers: speakersSet3)
+                
+                let event22: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event22.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit", endDate: NSDate(timeIntervalSince1970: ), name: "Plenary session: Leadership", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet4)
+                
+                let event23: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event23.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: ), name:"Workshops : Leadership", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet5)
+                
+                let event24: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event24.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut", endDate: NSDate(timeIntervalSince1970: ), name: "Coffee break", category: categoryEventPause, location: locationSaintCharles, speakers: speakersSet6)
+                
+                let event25: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event25.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: ), name: "Project working session", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet7)
+                
+                let event26: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event26.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", endDate: NSDate(timeIntervalSince1970: ), name: "Lunch", category: categoryEventEat, location: locationSaintCharles, speakers: speakersSet8)
+                
+                let event27: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event27.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: ), name: "Plenary session: Volunteers", category: categoryEventForum, location: locationLawFaculty, speakers: speakersSet9)
+                
+                let event28: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event28.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: ), name: "Workshops: Volunteers", category: categoryEventForum, location: locationSaintCharles, speakers: speakersSet1)
+                
+                let event29: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event29.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut", endDate: NSDate(timeIntervalSince1970: ), name: "Coffee break", category: categoryEventPause, location: nil, speakers: speakersSet2)
+                
+                let event30: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event30.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit", endDate: NSDate(timeIntervalSince1970: ), name: "Transition to Forum Fair location", category: categoryEventChange, location: nil, speakers: speakersSet3)
+                
+                let event31: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event31.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Et harum quidem rerum facilis est et expedita distinctio", endDate: NSDate(timeIntervalSince1970: ), name: "Forum Fair setup", category: categoryEventForum, location: locationVeyrassi, speakers: speakersSet4)
+                
+                let event32: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event32.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium", endDate: NSDate(timeIntervalSince1970: ), name: "Forum Fair", category: categoryEventForum, location: locationVeyrassi, speakers: speakersSet5)
+                
+                let event33: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
+                event33.setEvent( NSDate(timeIntervalSince1970: ), chosen: false, detail: "Sed ut perspiciatis unde omnis", endDate: NSDate(timeIntervalSince1970: ), name: "Dinner", category: categoryEventEat, location: locationVeyrassi, speakers: speakersSet6)
+
+*/
                 
                 
             }
