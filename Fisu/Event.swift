@@ -12,6 +12,28 @@ import CoreData
 
 class Event: NSManagedObject {
 
+    func setEvent(beginDate : NSDate?, chosen : Bool?, detail : String?, endDate : NSDate?, name : String?) -> Event {
+        self.beginDate = beginDate
+        self.chosen = chosen
+        self.detail = detail
+        self.endDate = endDate
+        self.name = name
+        return self
+    }
+    
+    func setEvent(beginDate : NSDate?, chosen : Bool?, detail : String?, endDate : NSDate?, name : String?, category : CategoryEvent?, location : Location?, speakers : NSSet?) -> Event {
+        self.beginDate = beginDate
+        self.chosen = chosen
+        self.detail = detail
+        self.endDate = endDate
+        self.name = name
+        self.hasCategory = category
+        self.hasLocation = location
+        self.hasSpeakers = speakers
+        return self
+    }
+    
+    
 // Insert code here to add functionality to your managed object subclass
     func switchValue(app : AppDelegate) {
         guard let isChosen = self.chosen else {

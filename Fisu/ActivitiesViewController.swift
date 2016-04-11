@@ -21,8 +21,9 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
-        let activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc)
-        activity.setValue("Test", forKey: "name")
+        var activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
+        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: , location: <#T##Location#>, speakers: <#T##NSSet#>)
+        
         
         do {
             try moc.save()

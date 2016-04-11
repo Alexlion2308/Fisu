@@ -12,6 +12,17 @@ import CoreData
 
 class CategoryEvent: NSManagedObject {
 
+    func setCategoyEvent(name:  String?) -> CategoryEvent {
+        self.name = name
+        return self
+    }
+    
+    func setCategoyEvent(name:  String?, events : NSSet?) -> CategoryEvent {
+        self.name = name
+        self.hasEvents = events
+        return self
+    }
+
 // Insert code here to add functionality to your managed object subclass
 
 }
