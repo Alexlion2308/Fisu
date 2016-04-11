@@ -36,21 +36,24 @@ class Event: NSManagedObject {
     
 // Insert code here to add functionality to your managed object subclass
     func switchValue() {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
         
         guard let isChosen = self.chosen else {
             return
         }
         self.chosen = !isChosen.boolValue
         
-        app.saveContext()
-        
+        do {
+            try self.managedObjectContext?.save()
+        } catch {
+            print(error)
+        }
     }
     
     static func fetchActivities() -> [Event] {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let fetchRequest = NSFetchRequest(entityName: "Event")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "beginDate", ascending: true)]
         do {
             let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
             return result! // si ça ne marche pas, mettre les attributs un par un

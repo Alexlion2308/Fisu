@@ -18,8 +18,11 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.myActivities = Event.fetchMyActivities()
+        self.myTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +65,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextView = segue.destinationViewController as! ActivityDetailViewController
-        let activityCell = sender as! ActivityTableViewCell
+        let activityCell = sender as! MyActivityTableViewCell
         nextView.activity = activityCell.activity
     }
 

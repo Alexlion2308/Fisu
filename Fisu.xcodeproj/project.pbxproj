@@ -108,18 +108,18 @@
 		849150521C9B6E58003FF5BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC71A1901CA305BB00BDC768 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC8FE18C1CBBE8680098D422 /* FactoryInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryInit.swift; sourceTree = "<group>"; };
-		ACE0383B1CA1B9200098B053 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE0383C1CA1B9200098B053 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		ACE0383D1CA1B9200098B053 /* CategoryCatering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryCatering+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE0383E1CA1B9200098B053 /* CategoryCatering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCatering.swift; sourceTree = "<group>"; };
-		ACE0383F1CA1B9200098B053 /* CategoryEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE038401CA1B9200098B053 /* CategoryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEvent.swift; sourceTree = "<group>"; };
-		ACE038411CA1B9200098B053 /* Speaker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Speaker+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE038421CA1B9200098B053 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
-		ACE038431CA1B9200098B053 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE038441CA1B9200098B053 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		ACE038451CA1B9200098B053 /* Catering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Catering+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		ACE038461CA1B9200098B053 /* Catering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catering.swift; sourceTree = "<group>"; };
+		ACE0383B1CA1B9200098B053 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Location+CoreDataProperties.swift"; path = "Fisu/Location+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE0383C1CA1B9200098B053 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Fisu/Location.swift; sourceTree = SOURCE_ROOT; };
+		ACE0383D1CA1B9200098B053 /* CategoryCatering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CategoryCatering+CoreDataProperties.swift"; path = "Fisu/CategoryCatering+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE0383E1CA1B9200098B053 /* CategoryCatering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCatering.swift; path = Fisu/CategoryCatering.swift; sourceTree = SOURCE_ROOT; };
+		ACE0383F1CA1B9200098B053 /* CategoryEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CategoryEvent+CoreDataProperties.swift"; path = "Fisu/CategoryEvent+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE038401CA1B9200098B053 /* CategoryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryEvent.swift; path = Fisu/CategoryEvent.swift; sourceTree = SOURCE_ROOT; };
+		ACE038411CA1B9200098B053 /* Speaker+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Speaker+CoreDataProperties.swift"; path = "Fisu/Speaker+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE038421CA1B9200098B053 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Speaker.swift; path = Fisu/Speaker.swift; sourceTree = SOURCE_ROOT; };
+		ACE038431CA1B9200098B053 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "Fisu/Event+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE038441CA1B9200098B053 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Fisu/Event.swift; sourceTree = SOURCE_ROOT; };
+		ACE038451CA1B9200098B053 /* Catering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Catering+CoreDataProperties.swift"; path = "Fisu/Catering+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACE038461CA1B9200098B053 /* Catering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Catering.swift; path = Fisu/Catering.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

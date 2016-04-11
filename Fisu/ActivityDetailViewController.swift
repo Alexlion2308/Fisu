@@ -26,6 +26,10 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         self.myCategory.text = category.name
         self.myDetail.text = self.activity.detail
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.myChosenOutlet.setOn(self.activity.chosen as! Bool, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,6 +48,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
 
 
     @IBAction func myChosenAction(sender: AnyObject) {
+        self.activity.switchValue()
     }
 /*    @IBAction func myChosenAction(sender: AnyObject) {
         let app = (UIApplication.sharedApplication().delegate as! AppDelegate)

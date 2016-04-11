@@ -19,11 +19,11 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
         
-        let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        /*let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
         let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
-        var activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
-        var location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
+        let activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
+        let location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
         location.setLocation(43.604634, longitude: 3.880842, name: "Gare Montpellier Saint-Roch")
         activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: nil, location: location, speakers: nil)
         
@@ -32,8 +32,10 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
             try moc.save()
         } catch let error as NSError {
             print("Error : \(error)")
-        }
-
+        } */
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         self.activities = Event.fetchActivities()
     }
 
