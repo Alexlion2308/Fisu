@@ -19,7 +19,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
 
-        self.fetchMyActivities()
+        self.myActivities = Event.fetchMyActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,22 +58,6 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
         cell.activity = self.myActivities[indexPath.row]
         cell.myTitle.text = cell.activity.name
         return cell
-    }
-    
-    
-    func fetchMyActivities() {
-        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return
-        }
-        let fetchRequest = NSFetchRequest(entityName: "Event")
-        fetchRequest.predicate = NSPredicate(format : "chosen == true")
-        do {
-            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
-                self.myActivities = result // si ça ne marche pas, mettre les attributs un par un
-            }
-        } catch {
-            fatalError("There was an error fetching my activities! \(error)")
-        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

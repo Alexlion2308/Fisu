@@ -26,15 +26,28 @@ class Event: NSManagedObject {
     }
     
     static func fetchActivities() -> [Event] {
-        let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         let fetchRequest = NSFetchRequest(entityName: "Event")
         do {
-            let result = try appDelegate!.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
-            print(result!.count)
+            let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
             return result! // si ça ne marche pas, mettre les attributs un par un
         } catch {
             fatalError("There was an error fetching the activities! \(error)")
+        }
+    }
+    
+    
+    static func fetchMyActivities() -> [Event] {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let fetchRequest = NSFetchRequest(entityName: "Event")
+        fetchRequest.predicate = NSPredicate(format : "chosen == true")
+        do {
+            let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event]
+            return result! // si ça ne marche pas, mettre les attributs un par un
+        } catch {
+            fatalError("There was an error fetching my activities! \(error)")
         }
     }
 }

@@ -8,10 +8,19 @@
 
 import Foundation
 import CoreData
-
+import UIKit
 
 class Location: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+    
+    static func fetchLocations() -> [Location] {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let fetchRequest = NSFetchRequest(entityName: "Location")
+        do {
+            let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Location]
+            return result!
+        } catch {
+            fatalError("There was an error fetching the activities! \(error)")
+        }
+    }
 }

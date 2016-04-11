@@ -20,7 +20,7 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         self.automaticallyAdjustsScrollViewInsets = false
 
         // Do any additional setup after loading the view.
-        self.fetchCaterings()
+        self.caterings = Catering.fetchCaterings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,21 +62,6 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         cell.myTitle.text = cell.catering!.name
         cell.myCategory.text = cell.catering!.hasCategory!.name
         return cell
-    }
-
-
-    func fetchCaterings() {
-        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return
-        }
-        let fetchRequest = NSFetchRequest(entityName: "Catering")
-        do {
-            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Catering] {
-                self.caterings = result // si ça ne marche pas, mettre les attributs un par un
-            }
-        } catch {
-            fatalError("There was an error fetching the caterings! \(error)")
-        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

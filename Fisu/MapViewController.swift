@@ -16,8 +16,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.fetchCaterings()
-        self.fetchActivities()
+        self.locations = Location.fetchLocations()
 
         self.addMarkersOnMap()
     }
@@ -29,8 +28,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var myMapView: MKMapView!
 
-    var caterings : [Catering] = [Catering]()
-    var activities : [Event] = [Event]()
+    var locations : [Location] = [Location]()
 
     /*
     // MARK: - Navigation
@@ -42,62 +40,18 @@ class MapViewController: UIViewController {
     }
     */
 
-
-    func fetchCaterings() {
-        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return
-        }
-        let fetchRequest = NSFetchRequest(entityName: "Catering")
-        do {
-            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Catering] {
-                self.caterings = result // si ça ne marche pas, mettre les attributs un par un
-            }
-        } catch {
-            fatalError("There was an error fetching the caterings! \(error)")
-        }
-    }
-    
-    
-    func fetchActivities() {
-        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
-            return
-        }
-        let fetchRequest = NSFetchRequest(entityName: "Event")
-        do {
-            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
-                self.activities = result // si ça ne marche pas, mettre les attributs un par un
-            }
-        } catch {
-            fatalError("There was an error fetching the activities! \(error)")
-        }
-    }
-
     func addMarkersOnMap() {
-        for catering : Catering in self.caterings {
-            let myLocation : Location = catering.hasLocation!
-            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+        for location : Location in self.locations {
+            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude as! Double, longitude: location.longitude as! Double)
 
             let mark = MKPointAnnotation()
             mark.coordinate = coordinate
-            mark.title = catering.name
-            mark.subtitle = catering.detail
+            mark.title = location.name
 
             myMapView.addAnnotation(mark)
-        }
-
-        for activity : Event in self.activities {
-            guard let location = activity.hasLocation else {
-                return
-            }
-            let myLocation : Location = location
-            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
             
-            let mark = MKPointAnnotation()
-            mark.coordinate = coordinate
-            mark.title = activity.name
-            mark.subtitle = activity.detail
-
-            myMapView.addAnnotation(mark)
+            let pin = myMapView.dequeueReusableAnnotationViewWithIdentifier("MyIdentifier") as? MKPinAnnotationView
+            pin?.pinTintColor = UIColor.blueColor()
         }
     }
 
