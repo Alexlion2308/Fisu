@@ -12,6 +12,24 @@ import UIKit
 
 class Catering: NSManagedObject {
     
+<<<<<<< HEAD
+    func setCatering(detail : String?, name : String?) -> Catering {
+        self.detail = detail
+        self.name = name
+        return self
+    }
+        
+    func setCatering(detail : String?, name : String?, category : CategoryCatering?, location : Location?) -> Catering {
+        self.detail = detail
+        self.name = name
+        self.hasCategory = category
+        self.hasLocation = location
+        return self
+    }
+
+// Insert code here to add functionality to your managed object subclass
+
+=======
     
     
     static func fetchCaterings() -> [Catering] {
@@ -25,4 +43,5 @@ class Catering: NSManagedObject {
             fatalError("There was an error fetching the caterings! \(error)")
         }
     }
+>>>>>>> 1681fc0d150dc084477c1db0f48370b55597a500
 }

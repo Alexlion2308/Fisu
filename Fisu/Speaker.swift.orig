@@ -1,0 +1,37 @@
+//
+//  Speaker.swift
+//  Fisu
+//
+//  Created by Alexandre on 22/03/2016.
+//  Copyright © 2016 Casati-Vasseur. All rights reserved.
+//
+
+import Foundation
+import CoreData
+
+
+class Speaker: NSManagedObject {
+<<<<<<< HEAD
+
+=======
+    
+    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?) -> Speaker {
+        self.designation = designation
+        self.detail = detail
+        self.name = name
+        self.surname = surname
+        return self
+    }
+    
+    func setCategoyCatering(designation : String?, detail : String?, name:  String?, surname : String?, speaksEvents : NSSet?) -> Speaker {
+        self.designation = designation
+        self.detail = detail
+        self.name = name
+        self.surname = surname
+        self.speaksEvents = speaksEvents
+        return self
+    }
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
+// Insert code here to add functionality to your managed object subclass
+
+}

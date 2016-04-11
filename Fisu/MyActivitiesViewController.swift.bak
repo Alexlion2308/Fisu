@@ -1,15 +1,18 @@
 //
-//  ActivitiesViewController.swift
+//  MyActivitiesViewController.swift
 //  Fisu
 //
-//  Created by vm mac on 20/03/2016.
+//  Created by vm mac on 21/03/2016.
 //  Copyright © 2016 Casati-Vasseur. All rights reserved.
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
 import CoreData
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
-class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,23 +21,8 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
-        
-        let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
-        let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
-        var activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
-        var location = NSManagedObject(entity: entityLocation!, insertIntoManagedObjectContext: moc) as! Location
-        location.setLocation(43.604634, longitude: 3.880842, name: "Gare Montpellier Saint-Roch")
-        activity.setEvent(NSDate(), chosen: true, detail: "Ceci est le detail de ce speaker", endDate: NSDate(), name: "MonEvent", category: nil, location: location, speakers: nil)
-        
-        
-        do {
-            try moc.save()
-        } catch let error as NSError {
-            print("Error : \(error)")
-        }
 
-        self.activities = Event.fetchActivities()
+        self.fetchMyActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +32,11 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var myTableView: UITableView!
 
-    var activities: [Event] = [Event]()
+<<<<<<< HEAD
+    var myActivities: [Event]
+=======
+    var myActivities: [Event] = [Event]()
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
     /*
     // MARK: - Navigation
@@ -56,6 +48,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     */
     
+    
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -63,21 +56,49 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.activities.count
+        return self.myActivities.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
-        cell.activity = self.activities[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("myActivityCell", forIndexPath: indexPath) as! MyActivityTableViewCell
+<<<<<<< HEAD
+        cell.activity = self.myActivities.getAtIndex(indexPath.row)
+=======
+        cell.activity = self.myActivities[indexPath.row]
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
         cell.myTitle.text = cell.activity.name
         return cell
+    }
+    
+    
+    func fetchMyActivities() {
+        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
+            return
+        }
+        let fetchRequest = NSFetchRequest(entityName: "Event")
+<<<<<<< HEAD
+        fetchRequest.predicate = NSPredicate(format : "chosen : %@", [NSNumber numberWithBool:YES])
+=======
+        fetchRequest.predicate = NSPredicate(format : "chosen == true")
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
+        do {
+            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
+                self.myActivities = result // si ça ne marche pas, mettre les attributs un par un
+            }
+        } catch {
+            fatalError("There was an error fetching my activities! \(error)")
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextView = segue.destinationViewController as! ActivityDetailViewController
         let activityCell = sender as! ActivityTableViewCell
+<<<<<<< HEAD
+        nextView.catering = activityCell.activity
+=======
         nextView.activity = activityCell.activity
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
     }
 
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {

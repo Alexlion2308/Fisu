@@ -41,6 +41,36 @@ class MapViewController: UIViewController {
     */
 
     func addMarkersOnMap() {
+<<<<<<< HEAD
+        print(self.activities.count)
+        print(self.caterings.count)
+        
+        for catering : Catering in self.caterings {
+            guard let location = catering.hasLocation else {
+                return
+            }
+            let myLocation : Location = location
+            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+            let mark = MKPointAnnotation()
+            mark.coordinate = coordinate
+            mark.title = myLocation.name
+
+            myMapView.addAnnotation(mark)
+        }
+
+        for activity : Event in self.activities {
+            guard let location = activity.hasLocation else {
+                return
+            }
+            let myLocation : Location = location
+            let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
+            
+            let mark = MKPointAnnotation()
+            mark.coordinate = coordinate
+            mark.title = myLocation.name
+
+            myMapView.addAnnotation(mark)
+=======
         for location : Location in self.locations {
             let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude as! Double, longitude: location.longitude as! Double)
 
@@ -52,6 +82,7 @@ class MapViewController: UIViewController {
             
             let pin = myMapView.dequeueReusableAnnotationViewWithIdentifier("MyIdentifier") as? MKPinAnnotationView
             pin?.pinTintColor = UIColor.blueColor()
+>>>>>>> 1681fc0d150dc084477c1db0f48370b55597a500
         }
     }
 

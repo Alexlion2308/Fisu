@@ -1,0 +1,31 @@
+//
+//  CategoryCatering.swift
+//  Fisu
+//
+//  Created by Alexandre on 22/03/2016.
+//  Copyright © 2016 Casati-Vasseur. All rights reserved.
+//
+
+import Foundation
+import CoreData
+
+
+class CategoryCatering: NSManagedObject {
+<<<<<<< HEAD
+
+=======
+    
+    func setCategoyCatering(name : String?) -> CategoryCatering {
+        self.name = name
+        return self
+    }
+    
+    func setCategoyCatering(name : String?, caterings : NSSet?) -> CategoryCatering {
+        self.name = name
+        self.hasCaterings = caterings
+        return self
+    }
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
+// Insert code here to add functionality to your managed object subclass
+
+}

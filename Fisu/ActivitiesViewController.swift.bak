@@ -7,7 +7,10 @@
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
 import CoreData
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
 class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -18,6 +21,8 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
+<<<<<<< HEAD
+=======
         
         let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
@@ -33,8 +38,9 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         } catch let error as NSError {
             print("Error : \(error)")
         }
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
-        self.activities = Event.fetchActivities()
+        self.fetchActivities()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +50,11 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var myTableView: UITableView!
 
+<<<<<<< HEAD
+    var activities: [Event]
+=======
     var activities: [Event] = [Event]()
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
     /*
     // MARK: - Navigation
@@ -69,15 +79,38 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
+<<<<<<< HEAD
+        cell.activity = self.activities.getAtIndex(indexPath.row)
+=======
         cell.activity = self.activities[indexPath.row]
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
         cell.myTitle.text = cell.activity.name
         return cell
+    }
+    
+    
+    func fetchActivities() {
+        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
+            return
+        }
+        let fetchRequest = NSFetchRequest(entityName: "Event")
+        do {
+            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
+                self.activities = result // si ça ne marche pas, mettre les attributs un par un
+            }
+        } catch {
+            fatalError("There was an error fetching the activities! \(error)")
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextView = segue.destinationViewController as! ActivityDetailViewController
         let activityCell = sender as! ActivityTableViewCell
+<<<<<<< HEAD
+        nextView.catering = activityCell.activity
+=======
         nextView.activity = activityCell.activity
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
     }
 
     override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {

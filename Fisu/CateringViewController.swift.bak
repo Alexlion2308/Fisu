@@ -7,7 +7,10 @@
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
 import CoreData
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
 
 class CateringViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,7 +23,7 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         self.automaticallyAdjustsScrollViewInsets = false
 
         // Do any additional setup after loading the view.
-        self.caterings = Catering.fetchCaterings()
+        self.fetchCaterings()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +52,11 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+<<<<<<< HEAD
+        var nbElements = self.caterings.count
+=======
         let nbElements = self.caterings.count
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
         return nbElements
     }
     
@@ -58,10 +65,31 @@ class CateringViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCellWithIdentifier("cateringCell", forIndexPath: indexPath) as! CateringTableViewCell
         
         // Configure the cell...
+<<<<<<< HEAD
+        cell.catering = self.caterings.getAtIndex(indexPath.row)
+        cell.myTitle.text = cell.catering.name
+        cell.myCategory.text = cell.catering.hasCategory
+=======
         cell.catering = self.caterings[indexPath.row]
         cell.myTitle.text = cell.catering!.name
         cell.myCategory.text = cell.catering!.hasCategory!.name
+>>>>>>> 648c3be2206243ed11e13a6a8d3a7ac6b33268a9
         return cell
+    }
+
+
+    func fetchCaterings() {
+        guard let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {
+            return
+        }
+        let fetchRequest = NSFetchRequest(entityName: "Catering")
+        do {
+            if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Catering] {
+                self.caterings = result // si ça ne marche pas, mettre les attributs un par un
+            }
+        } catch {
+            fatalError("There was an error fetching the caterings! \(error)")
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
