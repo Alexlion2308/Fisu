@@ -43,8 +43,11 @@ class Event: NSManagedObject {
         }
         self.chosen = !isChosen.boolValue
         
-        app.saveContext()
-        
+        do {
+            try self.managedObjectContext?.save()
+        } catch {
+            print(error)
+        }
     }
     
     static func fetchActivities() -> [Event] {

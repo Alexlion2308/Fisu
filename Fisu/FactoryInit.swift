@@ -131,7 +131,7 @@ class FactoryInit {
                 speakerME.setSpeaker("CEO", detail: "Sweden, World Village of Women Sports", name: "Eggertz-Forsmark", surname: "Malin")
                 
                 // Speakers Sets Creating
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                /*var speakersSet1 : Set<Speaker> = Set<Speaker>()
                 var speakersSet2 : Set<Speaker> = Set<Speaker>()
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
@@ -139,7 +139,7 @@ class FactoryInit {
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
                 var speakersSet1 : Set<Speaker> = Set<Speaker>()
-                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()*/
 
 
 
