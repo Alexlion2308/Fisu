@@ -19,7 +19,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
         
-        let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        /*let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
         let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
         let entityLocation = NSEntityDescription.entityForName("Location", inManagedObjectContext: moc)
         let activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc) as! Event
@@ -32,7 +32,7 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
             try moc.save()
         } catch let error as NSError {
             print("Error : \(error)")
-        }
+        } */
     }
     
     override func viewWillAppear(animated: Bool) {
