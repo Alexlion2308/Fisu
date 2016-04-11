@@ -41,7 +41,7 @@ class FactoryInit {
                 categoryEvent.setCategoryEvent(<#T##name: String?##String?#>)
                 
                 let speaker: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speaker.setCategoryCatering(<#T##designation: String?##String?#>, detail: <#T##String?#>, name: <#T##String?#>, surname: <#T##String?#>)
+                
                 
                 let event: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
                 
