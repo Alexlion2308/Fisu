@@ -35,13 +35,13 @@ class FactoryInit {
                 location.setLocation(<#T##latitude: Double?##Double?#>, longitude: <#T##Double?#>, name: <#T##String?#>)
                 
                 let categoryCatering: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
-                categoryCatering.setCategoyCatering(<#T##name: String?##String?#>)
+                categoryCatering.setCategoryCatering(<#T##name: String?##String?#>)
                 
                 let categoryEvent: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
-                categoryEvent.setCategoyEvent(<#T##name: String?##String?#>)
+                categoryEvent.setCategoryEvent(<#T##name: String?##String?#>)
                 
                 let speaker: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
-                speaker.setCategoyCatering(<#T##designation: String?##String?#>, detail: <#T##String?#>, name: <#T##String?#>, surname: <#T##String?#>)
+                speaker.setCategoryCatering(<#T##designation: String?##String?#>, detail: <#T##String?#>, name: <#T##String?#>, surname: <#T##String?#>)
                 
                 let event: Event = Event(entity : eventEntity!, insertIntoManagedObjectContext: context)
                 
