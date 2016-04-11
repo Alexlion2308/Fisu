@@ -20,8 +20,6 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
 
-        self.myChosenOutlet.title = self.activity.name
-        self.myName.text = self.activity.name
         guard let category = self.activity.hasCategory else {
             return
         }
@@ -35,7 +33,6 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
-    @IBOutlet weak var myChosenOutlet: UIBarButtonItem!
     @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var myCategory: UILabel!
     @IBOutlet weak var myDetail: UITextView!
@@ -44,10 +41,13 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
 
     var activity: Event!
 
+
     @IBAction func myChosenAction(sender: AnyObject) {
+    }
+/*    @IBAction func myChosenAction(sender: AnyObject) {
         let app = (UIApplication.sharedApplication().delegate as! AppDelegate)
         self.activity.switchValue(app)
-    }
+    } */
     /*
     // MARK: - Navigation
 
