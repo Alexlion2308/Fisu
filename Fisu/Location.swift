@@ -12,6 +12,22 @@ import UIKit
 
 class Location: NSManagedObject {
     
+    func setLocation(latitude : Double?, longitude : Double?, name : String?) -> Location {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.name = name
+        return self
+    }
+    
+    func setLocation(latitude : Double?, longitude : Double?, name : String?, caterings : NSSet?, events : NSSet?) -> Location {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.name = name
+        self.caterings = caterings
+        self.events = events
+        return self
+    }
+    
     static func fetchLocations() -> [Location] {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         

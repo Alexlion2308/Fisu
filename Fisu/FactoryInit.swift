@@ -87,7 +87,63 @@ class FactoryInit {
                 
                 let locationHotelMercure: Location = Location(entity : locationEntity!, insertIntoManagedObjectContext: context)
                 locationHotelMercure.setLocation(43.609169, longitude: 3.894202, name: "Hotel Mercure")
+                
+                // Set CategoryCatering
+                let categoryCateringRU: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
+                categoryCateringRU.setCategoryCatering("Restaurant Universitaire")
+                
+                let categoryCateringS: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
+                categoryCateringS.setCategoryCatering("Snack")
+                
+                let categoryCateringPN: CategoryCatering = CategoryCatering(entity : categoryCateringEntity!, insertIntoManagedObjectContext: context)
+                categoryCateringPN.setCategoryCatering("Pique-nique")
 
+                // Set CategoryEvent
+                let categoryEventSport: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventSport.setCategoryEvent("Sport")
+                
+                let categoryEventCongress: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventCongress.setCategoryEvent("Congress")
+                
+                let categoryEventShow: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventShow.setCategoryEvent("Show")
+                
+                let categoryEventForum: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventForum.setCategoryEvent("Forum")
+                
+                let categoryEventSeminar: CategoryEvent = CategoryEvent(entity : categoryEventEntity!, insertIntoManagedObjectContext: context)
+                categoryEventSeminar.setCategoryEvent("Seminar")
+                
+                // Set Speakers
+                let speakerSC: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speakerSC.setSpeaker("Baroness", detail: "Great Britain, Chair of UK Sport", name: "Campbell", surname: "Sue")
+                
+                let speakerPW: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speakerPW.setSpeaker("Professor", detail: "Brussel, Belgium, Vrije Universitet", name: "Wylleman", surname: "Paul")
+                
+                let speakerMD: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speakerMD.setSpeaker("Director", detail: "Autralia, Monash University, Monash Sport", name: "Doulton", surname: "Martin")
+                
+                let speakerOM: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speakerOM.setSpeaker("Professor", detail: "Russia, Russian State University of Physical Education, Sport and Tourism", name: "Matysin", surname: "Oleg")
+
+                let speakerME: Speaker = Speaker(entity : speakerEntity!, insertIntoManagedObjectContext: context)
+                speakerME.setSpeaker("CEO", detail: "Sweden, World Village of Women Sports", name: "Eggertz-Forsmark", surname: "Malin")
+                
+                // Speakers Sets Creating
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet2 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+                var speakersSet1 : Set<Speaker> = Set<Speaker>()
+
+
+
+                
                 
             }
             if appDelegate.managedObjectContext.hasChanges {
