@@ -88,7 +88,7 @@ class MapViewController: UIViewController {
         for activity : Event in self.activities {
             let myLocation : Location = activity.hasLocation!
             let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: myLocation.latitude as! Double, longitude: myLocation.longitude as! Double)
-
+            
             let mark = MKPointAnnotation()
             mark.coordinate = coordinate
             mark.title = activity.name

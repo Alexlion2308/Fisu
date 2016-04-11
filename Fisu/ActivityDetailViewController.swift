@@ -22,7 +22,10 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
 
         self.myChosenOutlet.title = self.activity.name
         self.myName.text = self.activity.name
-        self.myCategory.text = self.activity.hasCategory!.name
+        guard let category = self.activity.hasCategory else {
+            return
+        }
+        self.myCategory.text = category.name
         self.myDetail.text = self.activity.detail
     }
 
@@ -42,6 +45,8 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     var activity: Event!
 
     @IBAction func myChosenAction(sender: AnyObject) {
+        let app = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        self.activity.switchValue(app)
     }
     /*
     // MARK: - Navigation

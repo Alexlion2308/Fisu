@@ -66,7 +66,7 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
             return
         }
         let fetchRequest = NSFetchRequest(entityName: "Event")
-        fetchRequest.predicate = NSPredicate(format : "chosen : %@", NSNumber(bool: true))
+        fetchRequest.predicate = NSPredicate(format : "chosen == true")
         do {
             if let result = try appDelegate.managedObjectContext.executeFetchRequest(fetchRequest) as? [Event] {
                 self.myActivities = result // si ça ne marche pas, mettre les attributs un par un

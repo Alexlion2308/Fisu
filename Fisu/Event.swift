@@ -13,5 +13,14 @@ import CoreData
 class Event: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
+    func switchValue(app : AppDelegate) {
+        guard let isChosen = self.chosen else {
+            return
+        }
+        self.chosen = !isChosen.boolValue
+        
+        app.saveContext()
+        
+    }
 
 }

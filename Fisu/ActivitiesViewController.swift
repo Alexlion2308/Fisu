@@ -18,6 +18,17 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
         //Adjust TableView to the top of the screen
         self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
+        
+        let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        let entityActivity = NSEntityDescription.entityForName("Event", inManagedObjectContext: moc)
+        let activity = NSManagedObject(entity: entityActivity!, insertIntoManagedObjectContext: moc)
+        activity.setValue("Test", forKey: "name")
+        
+        do {
+            try moc.save()
+        } catch let error as NSError {
+            print("Error : \(error)")
+        }
 
         self.fetchActivities()
     }
