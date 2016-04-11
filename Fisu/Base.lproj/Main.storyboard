@@ -271,6 +271,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="myCategory" destination="geh-nf-7Pb" id="gDI-Qd-dkP"/>
+                        <outlet property="myChosenOutlet" destination="z9n-Bg-fES" id="RzW-2v-k0s"/>
                         <outlet property="myDetail" destination="3Vn-1w-tsf" id="M0x-P4-V0U"/>
                         <outlet property="myMapView" destination="HTz-5h-S6m" id="sri-uB-uiW"/>
                         <outlet property="myName" destination="1LZ-Rc-bwn" id="l2q-5F-iTL"/>

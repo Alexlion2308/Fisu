@@ -33,6 +33,7 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     
+    @IBOutlet weak var myChosenOutlet: UISwitch!
     @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var myCategory: UILabel!
     @IBOutlet weak var myDetail: UITextView!
