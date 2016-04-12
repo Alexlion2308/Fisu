@@ -21,6 +21,18 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(animated: Bool) {
         self.activities = Event.fetchActivities()
+        
+        for activity in self.activities {
+            let date = ActivitiesViewController.dateFormatter.stringFromDate(activity.beginDate!)
+            if self.sections.indexForKey(date) == nil {
+                self.sections[date] = [activity]
+            } else {
+                self.sections[date]!.append(activity)
+            }
+        }
+        self.sortedSections = Array(self.sections.keys).sort(<)
+        
+        self.myTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +41,9 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBOutlet weak var myTableView: UITableView!
+    
+    var sections = Dictionary<String, [Event]>()
+    var sortedSections = [String]()
 
     var activities: [Event] = [Event]()
     static var hourFormatter : NSDateFormatter = {
@@ -58,17 +73,25 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.sections.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.activities.count
+        return self.sections[self.sortedSections[section]]!.count
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sortedSections[section]
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("activityCell", forIndexPath: indexPath) as! ActivityTableViewCell
-        cell.activity = self.activities[indexPath.row]
+        
+        let tableSection = self.sections[self.sortedSections[indexPath.section]]
+        let tableItem = tableSection![indexPath.row]
+        
+        cell.activity = tableItem
         cell.myTitle.text = cell.activity.name
         var temp : String = ""
         if let _=cell.activity.beginDate {
