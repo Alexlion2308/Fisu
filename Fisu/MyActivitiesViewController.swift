@@ -22,9 +22,14 @@ class MyActivitiesViewController: UIViewController, UITableViewDataSource, UITab
     
     override func viewWillAppear(animated: Bool) {
         self.myActivities = Event.fetchMyActivities()
+        self.sections = Dictionary<String, [Event]>()
+        self.sortedSections = [String]()
         
         for activity in self.myActivities {
-            let date = ActivitiesViewController.dateFormatter.stringFromDate(activity.beginDate!)
+            guard let beginDate = activity.beginDate else {
+                return
+            }
+            let date = ActivitiesViewController.dateFormatter.stringFromDate(beginDate)
             if self.sections.indexForKey(date) == nil {
                 self.sections[date] = [activity]
             } else {

@@ -61,6 +61,8 @@
 		ACE0385C1CA1B9200098B053 /* Catering+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE038451CA1B9200098B053 /* Catering+CoreDataProperties.swift */; };
 		ACE0385D1CA1B9200098B053 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE038461CA1B9200098B053 /* Catering.swift */; };
 		ACE0385E1CA1B9200098B053 /* Catering.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE038461CA1B9200098B053 /* Catering.swift */; };
+		FCF8AB991CBCECB500492895 /* TypedMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8AB981CBCECB500492895 /* TypedMarker.swift */; };
+		FCF8AB9B1CBCECC900492895 /* TypedMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF8AB981CBCECB500492895 /* TypedMarker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 		ACE038441CA1B9200098B053 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Fisu/Event.swift; sourceTree = SOURCE_ROOT; };
 		ACE038451CA1B9200098B053 /* Catering+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Catering+CoreDataProperties.swift"; path = "Fisu/Catering+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		ACE038461CA1B9200098B053 /* Catering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Catering.swift; path = Fisu/Catering.swift; sourceTree = SOURCE_ROOT; };
+		FCF8AB981CBCECB500492895 /* TypedMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,7 @@
 				8491503C1C9B6E57003FF5BB /* Info.plist */,
 				849150341C9B6E57003FF5BB /* Fisu.xcdatamodeld */,
 				AC71A1901CA305BB00BDC768 /* Images.xcassets */,
+				FCF8AB981CBCECB500492895 /* TypedMarker.swift */,
 			);
 			path = Fisu;
 			sourceTree = "<group>";
@@ -371,6 +375,7 @@
 				ACE038511CA1B9200098B053 /* CategoryEvent.swift in Sources */,
 				8491502E1C9B6E57003FF5BB /* AppDelegate.swift in Sources */,
 				8405691F1CA0A5CE0003EB09 /* MyActivitiesViewController.swift in Sources */,
+				FCF8AB991CBCECB500492895 /* TypedMarker.swift in Sources */,
 				8480EFB21C9F2566003054F9 /* SpeakerDetailViewController.swift in Sources */,
 				8480EFC41C9F3050003054F9 /* ActivityTableViewCell.swift in Sources */,
 				8480EFB81C9F259A003054F9 /* CateringDetailViewController.swift in Sources */,
@@ -405,6 +410,7 @@
 				ACE038481CA1B9200098B053 /* Location+CoreDataProperties.swift in Sources */,
 				ACE0384A1CA1B9200098B053 /* Location.swift in Sources */,
 				ACE0384C1CA1B9200098B053 /* CategoryCatering+CoreDataProperties.swift in Sources */,
+				FCF8AB9B1CBCECC900492895 /* TypedMarker.swift in Sources */,
 				ACE038561CA1B9200098B053 /* Speaker.swift in Sources */,
 				ACE0384E1CA1B9200098B053 /* CategoryCatering.swift in Sources */,
 				849150461C9B6E57003FF5BB /* FisuTests.swift in Sources */,

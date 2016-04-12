@@ -21,9 +21,14 @@ class ActivitiesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(animated: Bool) {
         self.activities = Event.fetchActivities()
+        self.sections = Dictionary<String, [Event]>()
+        self.sortedSections = [String]()
         
         for activity in self.activities {
-            let date = ActivitiesViewController.dateFormatter.stringFromDate(activity.beginDate!)
+            guard let beginDate = activity.beginDate else {
+                return
+            }
+            let date = ActivitiesViewController.dateFormatter.stringFromDate(beginDate)
             if self.sections.indexForKey(date) == nil {
                 self.sections[date] = [activity]
             } else {

@@ -10,11 +10,14 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
+        self.myMapView.delegate = self
+        
         // Do any additional setup after loading the view.
         self.locations = Location.fetchLocations()
 
@@ -44,9 +47,19 @@ class MapViewController: UIViewController {
         for location : Location in self.locations {
             let coordinate : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude as! Double, longitude: location.longitude as! Double)
 
-            let mark = MKPointAnnotation()
+            let mark = TypedMarker()
             mark.coordinate = coordinate
             mark.title = location.name
+            
+            
+            if location.events!.count != 0 {
+                mark.type = "Event"
+            } else if location.caterings!.count != 0 {
+                mark.type = "Catering"
+            } else {
+                mark.type = "Other"
+            }
+            mark.subtitle = mark.type
 
             myMapView.addAnnotation(mark)
             
@@ -59,4 +72,36 @@ class MapViewController: UIViewController {
         myMapView.setRegion(myRegion, animated: true)
     }
 
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? TypedMarker{
+            var pinView: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier("pin") as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                pinView = dequeuedView
+            } else {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+                pinView.canShowCallout = true
+                pinView.calloutOffset = CGPoint(x: -5, y: 5)
+            }
+            
+            pinView.pinTintColor = self.choseColor(annotation.type)
+            return pinView
+        }
+        return nil
+    }
+    
+    func choseColor(type : String) -> UIColor {
+        var pinColor : UIColor
+        switch type {
+            case "Event":
+                pinColor = UIColor.redColor()
+            case "Catering":
+                pinColor = UIColor.blueColor()
+            case "Other":
+                pinColor = UIColor.greenColor()
+            default:
+                pinColor = UIColor.greenColor()
+        }
+        return pinColor
+    }
 }

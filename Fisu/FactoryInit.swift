@@ -73,9 +73,6 @@ class FactoryInit {
                 let locationLaGrandeMotte: Location = Location(entity : locationEntity!, insertIntoManagedObjectContext: context)
                 locationLaGrandeMotte.setLocation(43.561055, longitude: 4.085262, name: "La Grande Motte")
                 
-                let locationTownHall: Location = Location(entity : locationEntity!, insertIntoManagedObjectContext: context)
-                locationTownHall.setLocation(43.598568, longitude: 3.896829, name: "Town Hall")
-                
                 let locationCateringJardin: Location = Location(entity : locationEntity!, insertIntoManagedObjectContext: context)
                 locationCateringJardin.setLocation(43.619390, longitude: 3.886643, name: "Le Jardin des Sens")
                 

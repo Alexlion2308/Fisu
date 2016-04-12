@@ -104,7 +104,11 @@ class ActivityDetailViewController: UIViewController, UITableViewDelegate, UITab
         let mark = MKPointAnnotation()
         mark.coordinate = coordinate
         mark.title = self.activity.name
-        mark.subtitle = self.activity.detail
+        if let theCategory = self.activity.hasCategory {
+            if let theName = theCategory.name {
+                mark.subtitle = theName
+            }
+        }
         
         myMapView.addAnnotation(mark)
         myMapView.centerCoordinate = coordinate

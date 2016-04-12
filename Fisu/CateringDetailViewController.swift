@@ -54,7 +54,11 @@ class CateringDetailViewController: UIViewController {
         let mark = MKPointAnnotation()
         mark.coordinate = coordinate
         mark.title = self.catering.name
-        mark.subtitle = self.catering.detail
+        if let theCategory = self.catering.hasCategory {
+            if let theName = theCategory.name {
+                mark.subtitle = theName
+            }
+        }
 
         myMapView.addAnnotation(mark)
         myMapView.centerCoordinate = coordinate
